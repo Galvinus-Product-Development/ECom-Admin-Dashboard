@@ -1,0 +1,36 @@
+/* ProductSearch.css */
+
+/* Container for the search input */
+.product-search-container {
+    position: relative;
+    flex: 1;
+    max-width: 28rem; /* Equivalent to max-w-md */
+  }
+  
+  /* Search icon styling */
+  .product-search-icon {
+    position: absolute;
+    left: 0.75rem; /* 12px padding */
+    top: 50%;
+    transform: translateY(-50%); /* Center vertically */
+    color: #9ca3af; /* Gray color for the icon */
+  }
+
+  
+
+  .filters-inputs-container .product-search-container .search-input {
+    padding-left: 2.5rem; /* pl-10 */
+    padding-right: 1rem; /* pr-4 */
+    padding-top: 0.6rem; /* py-2 */
+    padding-bottom: 0.6rem; /* py-2 */
+    width: 100%; /* w-full */
+    border: 1px solid #ccc; /* border */
+    border-radius: 0.5rem; /* rounded-lg */
+    outline: none; /* focus:outline-none */
+  }
+  
+  .search-input:focus {
+    box-shadow: 0 0 0 2px #3b82f6; /* focus:ring-2 focus:ring-blue-500 */
+    border-color: #3b82f6;
+  }
+  

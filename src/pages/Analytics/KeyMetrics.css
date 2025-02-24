@@ -1,0 +1,92 @@
+.key-metrics-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+  
+  @media (min-width: 768px) {
+    .key-metrics-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  .key-metrics-card {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .key-metrics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .key-metrics-title {
+    font-size: 14px;
+    color: #6b7280;
+  }
+  
+  .key-metrics-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1f2937;
+  }
+  
+  .key-metrics-change {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+  
+  .key-metrics-change.positive .key-metrics-change-text {
+    color: #16a34a;
+  }
+  
+  .key-metrics-change.negative .key-metrics-change-text {
+    color: #ef4444;
+  }
+  
+  .key-metrics-change-text {
+    font-size: 14px;
+  }
+  
+  .key-metrics-icon-container {
+    padding: 12px;
+    border-radius: 50%;
+  }
+  
+  .revenue-icon {
+    background-color: #eff6ff;
+  }
+  
+  .orders-icon {
+    background-color: #d1fae5;
+  }
+  
+  .customers-icon {
+    background-color: #f3e8ff;
+  }
+  
+  .conversion-icon {
+    background-color: #fff7ed;
+  }
+  
+  .icon-blue {
+    color: #3b82f6;
+  }
+  
+  .icon-green {
+    color: #10b981;
+  }
+  
+  .icon-purple {
+    color: #8b5cf6;
+  }
+  
+  .icon-orange {
+    color: #f97316;
+  }
+  

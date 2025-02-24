@@ -1,0 +1,72 @@
+/* Container for the summary cards */
+.summary-cards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .summary-cards-container {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+  
+  /* Individual card */
+  .summary-card {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Card content */
+  .summary-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Label inside the card */
+  .summary-card-label {
+    font-size: 0.875rem; /* text-sm */
+    color: #6b7280; /* text-gray-500 */
+    margin: 0;
+  }
+  
+  /* Value inside the card */
+  .summary-card-value {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold;
+    margin: 0;
+  }
+  
+  .text-blue {
+    color: #2563eb; /* text-blue-500 */
+  }
+  
+  .text-yellow {
+    color: #ca8a04; /* text-yellow-600 */
+  }
+  
+  .text-red {
+    color: #dc2626; /* text-red-600 */
+  }
+  
+  /* Card icon */
+  .summary-card-icon {
+    flex-shrink: 0;
+  }
+  
+  .text-yellow {
+    color: #d97706; /* text-yellow-500 */
+  }
+  
+  .text-red {
+    color: #ef4444; /* text-red-500 */
+  }
+  
+  .text-blue {
+    color: #3b82f6; /* text-blue-500 */
+  }
+  

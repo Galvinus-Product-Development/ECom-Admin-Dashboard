@@ -1,0 +1,105 @@
+.payments-table-container {
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.payments-table {
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+.payments-table-header {
+  background-color: #f9fafb;
+}
+
+.payments-table-header-cell {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: #6b7280;
+}
+
+.payments-table-sort-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.payments-table-body {
+  background-color: white;
+}
+
+.payments-table-row:hover {
+  background-color: #f9fafb;
+}
+
+.payments-table-cell {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+}
+
+.payments-table-text {
+  font-size: 0.875rem;
+  color: #111827;
+}
+
+.payments-table-text-muted {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.payments-table-flex {
+  display: flex;
+  align-items: center;
+}
+
+.payments-table-icon {
+  margin-right: 0.5rem;
+}
+
+.payments-table-status {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+.payments-table-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.payments-table-action-btn {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.refund-btn {
+  background-color: #fef2f2;
+  color: #ef4444;
+  border: 1px solid #fef2f2;
+}
+
+.refund-btn:hover {
+  background-color: #fca5a5;
+}
+
+.details-btn {
+  background-color: #f9fafb;
+  color: #4b5563;
+  border: 1px solid #f9fafb;
+}
+
+.details-btn:hover {
+  background-color: #e5e7eb;
+}

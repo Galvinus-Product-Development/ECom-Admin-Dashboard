@@ -1,0 +1,143 @@
+/* Modal Overlay */
+.role-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal Container */
+  .role-modal-container {
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Header */
+  .role-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .role-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .role-close-btn {
+    padding: 6px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .role-close-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Role Selection */
+  .role-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 8px;
+  }
+  
+  .role-badge {
+    display: inline-flex;
+    padding: 8px 12px;
+    border-radius: 9999px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  /* Role Grid */
+  .role-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+  
+  /* Role Buttons */
+  .role-button {
+    padding: 16px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .role-default {
+    background: white;
+  }
+  
+  .role-default:hover {
+    border-color: #3b82f6;
+    background: #eff6ff;
+  }
+  
+  .role-selected {
+    border-color: #3b82f6;
+    background: #eff6ff;
+  }
+  
+  /* Role Icon */
+  .role-icon {
+    display: block;
+    margin: 0 auto;
+    height: 24px;
+    width: 24px;
+  }
+  
+  /* Role Text */
+  .role-text {
+    display: block;
+    margin-top: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+  }
+  
+  /* Footer */
+  .role-modal-footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+  }
+  
+  .role-cancel-btn,
+  .role-save-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .role-cancel-btn {
+    background: #f3f4f6;
+    color: #374151;
+  }
+  
+  .role-cancel-btn:hover {
+    background: #e5e7eb;
+  }
+  
+  .role-save-btn {
+    background: #3b82f6;
+    color: white;
+  }
+  
+  .role-save-btn:hover {
+    background: #2563eb;
+  }
+  

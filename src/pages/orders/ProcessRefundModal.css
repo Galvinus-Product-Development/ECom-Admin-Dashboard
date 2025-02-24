@@ -1,0 +1,140 @@
+/* Modal overlay */
+.refund-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal content */
+  .refund-modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 28rem; /* max-w-md equivalent */
+  }
+  
+  /* Header section */
+  .refund-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .refund-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .close-button {
+    padding: 0.25rem;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .close-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* Body section */
+  .refund-modal-body {
+    margin-bottom: 1.5rem;
+  }
+  
+  .refund-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .input-container {
+    position: relative;
+    margin-top: 0.25rem;
+    border-radius: 0.375rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .currency-sign {
+    position: absolute;
+    inset-y: 0;
+    left: 0;
+    padding-left: 0.75rem;
+    display: flex;
+    align-items: center;
+    pointer-events: none;
+  }
+  
+  .currency-symbol {
+    color: #6b7280;
+  }
+  
+  .refund-input {
+    padding-left: 2.25rem;
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.875rem;
+    color: #374151;
+  }
+  
+  .refund-reason-container {
+    margin-top: 1rem;
+  }
+  
+  .refund-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.875rem;
+    resize: vertical;
+  }
+  
+  /* Footer section */
+  .refund-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+  
+  .cancel-button,
+  .process-refund-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .cancel-button {
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cancel-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .process-refund-button {
+    background-color: #3b82f6;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .process-refund-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .process-refund-button:disabled {
+    background-color: #93c5fd;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  

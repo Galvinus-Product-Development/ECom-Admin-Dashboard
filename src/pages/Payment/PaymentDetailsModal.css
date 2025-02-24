@@ -1,0 +1,97 @@
+.payment-details-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .payment-details-modal-container {
+    background-color: white;
+    border-radius: 8px;
+    padding: 24px;
+    width: 100%;
+    max-width: 32rem;
+  }
+  
+  .payment-details-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .payment-details-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .payment-details-modal-close-btn {
+    padding: 4px;
+    border-radius: 4px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .payment-details-modal-close-btn:hover {
+    background: rgba(0, 0, 0, 0.1);
+  }
+  
+  .payment-details-modal-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  
+  .payment-details-modal-label {
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #4b5563;
+  }
+  
+  .payment-details-modal-text {
+    margin-top: 4px;
+  }
+  
+  .payment-details-modal-method {
+    margin-top: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .payment-details-modal-status {
+    margin-top: 4px;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+    text-align: center;
+    border-radius: 9999px;
+  }
+  
+  .payment-details-modal-refund-reason {
+    grid-column: span 2;
+  }
+  
+  .payment-details-modal-footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .payment-details-modal-close-btn-footer {
+    padding: 8px 16px;
+    border-radius: 0.375rem;
+    background-color: #e5e7eb;
+    color: #4b5563;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  
+  .payment-details-modal-close-btn-footer:hover {
+    background-color: #d1d5db;
+  }
+  

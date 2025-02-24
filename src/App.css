@@ -1,0 +1,9 @@
+/* Global styles for font and body */
+body {
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+    background-color: #e5e7eb; /* Light gray background for the dashboard */
+    margin: 0;
+    padding: 0;
+
+  }
+  

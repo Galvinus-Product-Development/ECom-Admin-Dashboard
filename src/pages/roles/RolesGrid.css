@@ -1,0 +1,152 @@
+.roles-list-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 640px) {
+  .roles-list-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .roles-list-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.roles-list-item {
+  background-color: white;
+  border-radius: 0.375rem;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.roles-list-item-content {
+  padding: 1rem;
+}
+
+.roles-list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.roles-list-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.roles-list-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.roles-list-edit-btn,
+.roles-list-delete-btn {
+  padding: 0.25rem;
+  border-radius: 0.375rem;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.roles-list-edit-btn:hover,
+.roles-list-delete-btn:hover {
+  background-color: #f3f4f6;
+}
+
+.roles-list-delete-btn {
+  color: #ef4444;
+}
+
+.roles-list-description {
+  font-size: 0.875rem;
+  color: #4b5563;
+  margin-bottom: 1rem;
+}
+
+.roles-list-stats {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin-bottom: 1rem;
+}
+
+.roles-list-stat {
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.roles-list-stat-icon {
+  color: #9ca3af;
+}
+
+.roles-list-permissions {
+  margin-top: 1rem;
+}
+
+.roles-list-permissions-title {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.75rem;
+}
+
+.roles-list-permission {
+  background-color: #f9fafb;
+  padding: 0.5rem;
+  border-radius: 0.375rem;
+  margin-bottom: 0.75rem;
+}
+
+.roles-list-permission-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.25rem;
+}
+
+.roles-list-permission-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.roles-list-permission-module {
+  background-color: #bfdbfe;
+  color: #1d4ed8;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.375rem;
+}
+
+.roles-list-permission-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.roles-list-permission-action {
+  font-size: 0.75rem;
+  color: #6b7280;
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.roles-list-last-updated {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #e5e7eb;
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.roles-list-actions button{
+  border: none;
+}

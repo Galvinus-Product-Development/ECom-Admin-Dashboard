@@ -1,0 +1,123 @@
+/* Modal overlay */
+.cancel-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Modal content */
+  .cancel-modal-content {
+    background-color: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: 100%;
+    max-width: 28rem; /* max-w-md equivalent */
+  }
+  
+  /* Header section */
+  .cancel-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .cancel-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .close-button {
+    padding: 0.25rem;
+    border-radius: 50%;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .close-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  /* Body section */
+  .cancel-modal-body {
+    margin-bottom: 1.5rem;
+  }
+  
+  .alert-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background-color: #fef3c7;
+    color: #f59e0b;
+    border-radius: 0.375rem;
+  }
+  
+  .alert-text {
+    font-size: 0.875rem;
+  }
+  
+  .cancel-reason-container {
+    margin-top: 1rem;
+  }
+  
+  .cancel-reason-label {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-bottom: 0.5rem;
+  }
+  
+  .cancel-reason-textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 0.375rem;
+    border: 1px solid #d1d5db;
+    font-size: 0.875rem;
+    resize: vertical;
+  }
+  
+  /* Footer section */
+  .cancel-modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.75rem;
+  }
+  
+  .go-back-button,
+  .cancel-order-button {
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    font-size: 0.875rem;
+  }
+  
+  .go-back-button {
+    border: 1px solid #d1d5db;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .go-back-button:hover {
+    background-color: #f3f4f6;
+  }
+  
+  .cancel-order-button {
+    background-color: #ef4444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .cancel-order-button:hover {
+    background-color: #dc2626;
+  }
+  
+  .cancel-order-button:disabled {
+    background-color: #fca5a5;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  

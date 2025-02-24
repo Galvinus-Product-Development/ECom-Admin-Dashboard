@@ -1,0 +1,16 @@
+/* Styling for the Header component */
+.header-container {
+    margin-bottom: 2rem;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3748; /* Gray 800 */
+  }
+  
+  .header-subtitle {
+    color: #4a5568; /* Gray 600 */
+    margin-top: 0.25rem;
+  }
+  

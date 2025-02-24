@@ -1,0 +1,55 @@
+.payment-management {
+    padding: 1.5rem;
+    margin-left: 18rem;
+    margin-top: 4rem;
+    font-family: "Lato", Arial, Helvetica, sans-serif;
+  }
+
+    
+  .payment-header {
+    margin-bottom: 2rem;
+  }
+  
+  .payment-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1f2937; /* gray-800 */
+  }
+  
+  .payment-subtitle {
+    color: #4b5563; /* gray-600 */
+    margin-top: 0.25rem;
+  }
+
+
+
+
+
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-completed {
+  background-color: #d1fae5; /* Tailwind's bg-green-100 */
+  color: #065f46; /* Tailwind's text-green-800 */
+}
+
+.status-pending {
+  background-color: #fef3c7; /* Tailwind's bg-yellow-100 */
+  color: #92400e; /* Tailwind's text-yellow-800 */
+}
+
+.status-failed {
+  background-color: #fee2e2; /* Tailwind's bg-red-100 */
+  color: #991b1b; /* Tailwind's text-red-800 */
+}
+
+.status-refunded,
+.status-default {
+  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+  color: #374151; /* Tailwind's text-gray-800 */
+}

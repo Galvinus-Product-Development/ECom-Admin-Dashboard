@@ -1,0 +1,22 @@
+/* ProductList.css */
+
+/* Wrapper for the grid layout */
+.product-list {
+    display: grid;
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+    gap: 1.5rem; /* Gap between grid items */
+  }
+  
+  @media (min-width: 768px) {
+    .product-list {
+      grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .product-list {
+      grid-template-columns: repeat(3, 1fr); /* Three columns for large screens */
+    }
+  }
+  
+  

@@ -1,0 +1,96 @@
+/* PaymentSummaryCards.css */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.md\:grid-cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.mb-6 {
+  margin-bottom: 1.5rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card-header .title {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+.card-header .value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000;
+}
+
+.card-header .icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* Total Revenue */
+.card-total-revenue {
+  border-left: 4px solid #34d399; /* Green */
+}
+
+.card-total-revenue .card-header {
+  background-color: #f0fdf4;
+}
+
+.card-total-revenue .icon {
+  color: #34d399; /* Green */
+}
+
+/* Pending Payments */
+.card-pending-payments {
+  border-left: 4px solid #f59e0b; /* Yellow */
+}
+
+.card-pending-payments .card-header {
+  background-color: #fff7e6;
+}
+
+.card-pending-payments .icon {
+  color: #f59e0b; /* Yellow */
+}
+
+/* Total Refunds */
+.card-total-refunds {
+  border-left: 4px solid #f87171; /* Red */
+}
+
+.card-total-refunds .card-header {
+  background-color: #fee2e2;
+}
+
+.card-total-refunds .icon {
+  color: #f87171; /* Red */
+}
+
+/* Success Rate */
+.card-success-rate {
+  border-left: 4px solid #3b82f6; /* Blue */
+}
+
+.card-success-rate .card-header {
+  background-color: #dbeafe;
+}
+
+.card-success-rate .icon {
+  color: #3b82f6; /* Blue */
+}

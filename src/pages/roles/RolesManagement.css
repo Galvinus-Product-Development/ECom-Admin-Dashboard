@@ -1,0 +1,39 @@
+/* RolesManagement.css */
+.roles-management-container {
+    padding: 1.5rem;
+    margin-left: 18rem;
+    margin-top: 4rem;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+  }
+  
+  .header-container {
+    margin-bottom: 2rem;
+  }
+  
+  .header-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2d3748; /* Tailwind's gray-800 */
+  }
+  
+  .header-description {
+    color: #718096; /* Tailwind's gray-600 */
+    margin-top: 0.25rem;
+  }
+  
+  .icon-create {
+    color: #48bb78; /* Tailwind's green-500 */
+  }
+  
+  .icon-read {
+    color: #4299e1; /* Tailwind's blue-500 */
+  }
+  
+  .icon-update {
+    color: #ed8936; /* Tailwind's orange-500 */
+  }
+  
+  .icon-delete {
+    color: #f56565; /* Tailwind's red-500 */
+  }
+  

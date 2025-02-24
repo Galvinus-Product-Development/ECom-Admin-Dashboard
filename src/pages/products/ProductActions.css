@@ -1,0 +1,28 @@
+/* ProductActions.css */
+
+/* Container for product actions */
+.product-actions {
+    display: flex;
+    gap: 0.5rem; /* Space between action buttons */
+  }
+  
+  /* Add Product button */
+  .product-actions-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem; /* Space between icon and text */
+    padding: 0.5rem 1rem; /* Button padding */
+    background-color: #6366f1; /* Blue background */
+    color: #ffffff; /* White text */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-size: 1rem; /* Text size equivalent to base */
+    font-weight: 500; /* Medium font weight */
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth hover effect */
+    border: none;
+  }
+  
+  .product-actions-button:hover {
+    background-color: #1d4ed8; /* Darker blue on hover */
+  }
+  

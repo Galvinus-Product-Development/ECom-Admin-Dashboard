@@ -1,0 +1,102 @@
+/* Modal Overlay */
+.activity-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top:60px;
+  }
+  
+  /* Modal Container */
+  .activity-modal-container {
+    background: white;
+    border-radius: 10px;
+    padding: 24px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  /* Header */
+  .activity-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .activity-modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
+  
+  .activity-close-btn {
+    padding: 6px;
+    border-radius: 6px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .activity-close-btn:hover {
+    background: rgba(0, 0, 0, 0.05);
+  }
+  
+  /* Activity List */
+  .activity-list {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+  }
+  
+  /* Activity Item */
+  .activity-item {
+    border-bottom: 1px solid #e5e7eb;
+    padding-bottom: 16px;
+  }
+  
+  .activity-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .activity-action {
+    font-weight: 500;
+    color: #111827;
+  }
+  
+  .activity-details {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  .activity-timestamp {
+    font-size: 0.875rem;
+    color: #6b7280;
+  }
+  
+  /* Footer */
+  .activity-modal-footer {
+    margin-top: 24px;
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .activity-close-btn-secondary {
+    padding: 8px 16px;
+    border-radius: 8px;
+    background: #f3f4f6;
+    color: #374151;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .activity-close-btn-secondary:hover {
+    background: #e5e7eb;
+  }
+  

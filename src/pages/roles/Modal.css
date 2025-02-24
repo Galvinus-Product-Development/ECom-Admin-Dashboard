@@ -1,0 +1,45 @@
+/* Modal.css */
+
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background-color: #ffffff;
+    padding: 1.5rem; /* Tailwind's p-6 */
+    border-radius: 0.5rem; /* Tailwind's rounded-lg */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-lg */
+    max-width: 28rem; /* Tailwind's max-w-md */
+    width: 100%;
+    position: relative;
+  }
+  
+  .modal-title {
+    font-size: 1.25rem; /* Tailwind's text-xl */
+    font-weight: 700; /* Tailwind's font-bold */
+    margin-bottom: 1rem;
+  }
+  
+  .modal-description {
+    color: #6b7280; /* Tailwind's gray-500 */
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-close-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem; /* Tailwind's p-1 */
+    color: #6b7280; /* Tailwind's gray-500 */
+    transition: color 0.2s;
+  }
+  
+  .modal-close-button:hover {
+    color: #1f2937; /* Tailwind's gray-800 */
+  }
+  

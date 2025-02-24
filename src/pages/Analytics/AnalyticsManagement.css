@@ -1,0 +1,31 @@
+/* AnalyticsManagement.css */
+
+/* Main container padding */
+.analytics-container {
+    padding: 1.5rem;
+    margin-left: 18rem;
+    margin-top: 4rem;
+    font-family: 'Lato', Arial, Helvetica, sans-serif;
+  }
+  
+  /* Title section */
+  .analytics-title {
+    margin-bottom: 2rem;
+  }
+  
+  .analytics-title h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2d3748; /* Equivalent to text-gray-800 */
+  }
+  
+  .analytics-title p {
+    color: #4a5568; /* Equivalent to text-gray-600 */
+    margin-top: 0.25rem;
+  }
+  
+  /* Section Spacing */
+  .section-spacing {
+    margin-bottom: 2rem;
+  }
+  

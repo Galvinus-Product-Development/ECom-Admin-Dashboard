@@ -1,0 +1,26 @@
+/* ProductFilter.css */
+
+/* Wrapper for the select dropdown */
+.product-filter {
+    padding: 0.5rem 1rem; /* Space inside the dropdown */
+    border: 1px solid #d1d5db; /* Light gray border */
+    border-radius: 0.5rem; /* Rounded corners */
+    font-size: 1rem; /* Standard text size */
+    color: #333333; /* Dark text color */
+    background-color: #ffffff; /* White background */
+    transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions for focus states */
+    outline: none;
+  }
+  
+  /* Focus styles */
+  .product-filter:focus {
+    border-color: #6366f1; /* Blue border on focus */
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3); /* Subtle blue glow */
+  }
+  
+  /* Option styles */
+  .product-filter option {
+    font-size: 1rem; /* Maintain consistent font size */
+    color: #333333; /* Dark text color for options */
+  }
+  

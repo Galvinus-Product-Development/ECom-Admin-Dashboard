@@ -1,0 +1,43 @@
+/* Styling for the Filters component */
+.filters-container {
+    margin-bottom: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* align-items: center; */
+    justify-content: space-between;
+    flex-direction: row !important;
+  }
+  
+  .filters-container .filter-inputs {
+    display: flex;
+    gap: 1rem;
+  }
+  
+  .filters-container select,
+  .filters-container input {
+    padding: 0.5rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    outline: none;
+  }
+  
+  .filters-container select:focus,
+  .filters-container input:focus {
+    border-color: #4caf50;
+  }
+  
+  .filters-container button {
+    padding: 0.5rem 1rem;
+    background-color: #6366f1;
+    color: white;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: none;
+  }
+  
+  .filters-container button:hover {
+    background-color: #0056b3;
+  }
+  

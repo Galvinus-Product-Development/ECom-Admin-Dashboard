@@ -1,0 +1,176 @@
+.inventory-table-container {
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+.inventory-table {
+  min-width: 100%;
+  border-collapse: collapse;
+}
+
+.table-header {
+  background-color: #f9fafb;
+}
+
+.table-header th {
+  padding: 0.75rem 1.5rem;
+  text-align: left;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sortable-header button {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  color: inherit;
+}
+
+.table-body {
+  background-color: white;
+}
+
+.table-row {
+  transition: background-color 0.2s;
+}
+
+.table-row:hover {
+  background-color: #f9fafb;
+}
+
+.table-row td {
+  padding: 1rem 1.5rem;
+  white-space: nowrap;
+  font-size: 0.875rem;
+}
+
+.checkbox-input {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.25rem;
+  border: 1px solid #d1d5db;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.checkbox-input:focus {
+  outline: none;
+  ring: 2px #bfdbfe;
+}
+
+.product-info {
+  display: flex;
+  align-items: center;
+}
+
+.product-image {
+  flex-shrink: 0;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+
+.product-details {
+  margin-left: 1rem;
+}
+
+.product-name {
+  font-weight: 500;
+  color: #111827;
+}
+
+.product-description {
+  color: #6b7280;
+}
+
+.category-tag {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.stock-info {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.stock-count {
+  color: #111827;
+}
+
+.status-tag {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 9999px;
+}
+
+.action-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.restock-button,
+.move-button {
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  border-radius: 0.375rem;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.restock-button {
+  background-color: #eff6ff;
+  color: #2563eb;
+}
+
+.restock-button:hover {
+  background-color: #dbeafe;
+}
+
+.move-button {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.move-button:hover {
+  background-color: #e5e7eb;
+}
+
+/* Add your status color classes here */
+.status-in_stock {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.status-low_stock {
+  background-color: #fef9c3;
+  color: #854d0e;
+}
+
+.status-out_of_stock {
+  background-color: #fee2e2;
+  color: #991b1b;
+}

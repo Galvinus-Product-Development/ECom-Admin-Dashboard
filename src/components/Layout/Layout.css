@@ -1,0 +1,8 @@
+/* Layout container */
+.layout-container {
+    min-height: 100vh;
+    background-color: #f3f4f6; /* Tailwind equivalent of bg-gray-100 */
+    width: 100%;
+  }
+
+  

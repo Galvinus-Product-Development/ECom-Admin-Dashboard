@@ -1,0 +1,74 @@
+.roles-search-container {
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.roles-search-flex {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+.roles-search-input-container {
+  position: relative;
+  flex: 1;
+  max-width: 24rem;
+}
+
+.roles-search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+.roles-search-input {
+  padding-left: 2.5rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.roles-search-input:focus {
+  border-color: #3b82f6;
+  ring: 2px solid #3b82f6;
+}
+
+.roles-module-select {
+  padding: 0.5rem 1rem;
+  border: 1px solid #d1d5db;
+  border-radius: 0.375rem;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.roles-module-select:focus {
+  border-color: #3b82f6;
+  ring: 2px solid #3b82f6;
+}
+
+.roles-create-btn {
+  padding: 0.5rem 1rem;
+  background-color: #6366f1;
+  color: white;
+  border-radius: 0.375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s;
+  border: none;
+}
+
+.roles-create-btn:hover {
+  background-color: #1d4ed8;
+}

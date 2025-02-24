@@ -1,0 +1,47 @@
+/* Container styling */
+.summary-cards-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* For small screens */
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  @media (min-width: 768px) {
+    .summary-cards-container {
+      grid-template-columns: repeat(4, 1fr); /* For medium and larger screens */
+    }
+  }
+  
+  /* Individual card styling */
+  .summary-card {
+    background-color: #ffffff; /* bg-white */
+    padding: 1rem; /* p-4 */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* shadow-sm */
+  }
+  
+  /* Card content styling */
+  .summary-card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Card label styling */
+  .summary-card-label {
+    font-size: 0.875rem; /* text-sm */
+    color: #6b7280; /* text-gray-500 */
+  }
+  
+  /* Card value styling */
+  .summary-card-value {
+    font-size: 1.875rem; /* text-2xl */
+    font-weight: 700; /* font-bold */
+  }
+  
+  /* Card icon styling */
+  .summary-card-icon {
+    display: flex;
+    align-items: center;
+  }
+  

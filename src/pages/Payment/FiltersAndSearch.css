@@ -1,0 +1,69 @@
+/* FiltersAndSearch.css */
+.filters-and-search{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.filters-and-search__wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+}
+
+.filters-and-search__search {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  padding: 0.25rem 0.5rem;
+  width: 200px;
+}
+
+.filters-and-search__search-icon {
+  position: absolute;
+  left: 0.5rem;
+  color: #666;
+}
+
+.filters-and-search__input {
+  padding-left: 2rem;
+  padding-right: 0.5rem;
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+  color: #333;
+  /* background-color: #f3f4f6; */
+}
+
+.filters-and-search__dropdown {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background-color: white;
+  cursor: pointer;
+}
+
+.filters-and-search__date-range {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.filters-and-search__date-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  width: 150px;
+}
+
+.filters-and-search__date-separator {
+  font-size: 1rem;
+  color: #666;
+}
