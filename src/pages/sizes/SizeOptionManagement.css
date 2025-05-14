@@ -1,0 +1,95 @@
+.size-option-management {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+  }
+  
+  .size-option-management h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .size-option-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px;
+    align-items: flex-start;
+  }
+  
+  .size-option-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .size-option-form button {
+    align-self: flex-start;
+    padding: 8px 12px;
+    background-color: #0c0d19;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .size-option-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .size-option-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    background: #f9f9f9;
+    margin-bottom: 5px;
+  }
+  
+  .size-option-list li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  .size-option-list .size-name {
+    flex: 1; /* Takes remaining space */
+    min-width: 150px; /* Ensures consistency */
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+/* Button container to maintain fixed position */
+.size-option-list .button-group {
+  display: flex;
+  gap: 8px;
+  min-width: 120px; /* Ensures buttons don't shift */
+  justify-content: flex-end;
+}
+  
+  .size-option-list button {
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  
+  }
+  
+  .size-option-list .edit-btn {
+    
+    background-color: #0c0d19;
+    color: white;
+  }
+  
+  .size-option-list .delete-btn {
+    background-color: #0c0d19;
+    color: white;
+  }
+  

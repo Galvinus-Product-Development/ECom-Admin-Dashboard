@@ -1,0 +1,60 @@
+.brand-table-container {
+  padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  .brand-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .brand-table-container thead {
+    background-color: #007bff;
+    color: rgb(32, 7, 7);
+  }
+  
+  .brand-table-container th,
+  .brand-table-container td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .brand-table-container tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  
+  .brand-table-container tbody tr:hover {
+    background-color: #e9ecef;
+  }
+  
+  .brand-table-container button {
+    padding: 6px 10px;
+    margin-right: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+  }
+  
+  .brand-table-container button:first-child {
+    background-color: #ffc107;
+    color: #333;
+  }
+  
+  .brand-table-container button:first-child:hover {
+    background-color: #e0a800;
+  }
+  
+  .brand-table-container button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .brand-table-container button:last-child:hover {
+    background-color: #c82333;
+  }
+  

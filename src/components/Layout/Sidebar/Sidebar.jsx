@@ -1,23 +1,30 @@
-import React from "react";
-import { Link, useLocation } from "react-router-dom";
 import {
-  Users,
-  Package,
-  ShoppingCart,
+  BarChart2,
+  Bell,
   Box,
   CreditCard,
-  BarChart2,
-  Shield,
-  Bell,
+  FolderOpen,
   Home,
+  Package,
+  Palette,
+  Ruler,
+  Shield,
+  ShoppingCart,
+  Tag,
+  Users
 } from "lucide-react";
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
 import "./Sidebar.css";
-import gal_logo from "../../../assets/gal_logo.png";
 
 const menuItems = [
   { icon: Home, label: "Dashboard", path: "/" },
   { icon: Users, label: "User Management", path: "/users" },
   { icon: Package, label: "Products", path: "/products" },
+  { icon: FolderOpen, label: "Product Category", path: "/product-categories" },
+  { icon: Tag, label: "Brands", path: "/brands" },
+  { icon: Palette, label: "Colours", path: "/colours" },
+  { icon: Ruler, label: "Size", path: "/sizes" },
   { icon: ShoppingCart, label: "Orders", path: "/orders" },
   { icon: Box, label: "Inventory", path: "/inventory" },
   { icon: CreditCard, label: "Payments", path: "/payments" },

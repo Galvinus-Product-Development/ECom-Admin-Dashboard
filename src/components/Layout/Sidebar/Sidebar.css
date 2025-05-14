@@ -2,11 +2,11 @@
 
 .sidebar {
   width: 18rem;
-  background-color: #111827;
+  background-color: #5375bd;
   background-color: #fff;
   /* color: white; */
   color: #1d2a60;
-  height: 100vh;
+  height: auto;
   position: fixed;
   /* top: 0; */
   left: 0;

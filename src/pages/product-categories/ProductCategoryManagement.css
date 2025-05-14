@@ -1,0 +1,321 @@
+/* Container Styling */
+.product-category-management-container {
+
+        max-width: calc(100% - 18rem); /* Adjust for sidebar width */
+        margin-left: 18rem; /* Push right to make space for sidebar */
+        margin-top: 4rem; /* Push down to make space for header */
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Title */
+.product-category-management-container h2 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+/* Top Bar: Search, Sort, and New Category Button */
+.top-bar {
+    max-width: calc(100% - 18rem); /* Adjust for sidebar width */
+    margin-left: 18rem; /* Push right to make space for sidebar */
+    margin-top: 4rem; 
+    background: #f9f9f9;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 8px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.search-sort-container {
+    display: flex;
+    align-items:center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Larger Search Box */
+.search-sort-container input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    min-width: 300px;
+    flex-grow: 1;
+}
+
+/* Sort Dropdown */
+.search-sort-container select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* New Category Form */
+.new-category-button {
+    padding: 8px 12px;
+    font-size: 14px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.new-category-button:hover {
+    background-color: #0056b3;
+}
+
+/*new-category-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.new-category-container input,
+.new-category-container select,
+.new-category-container button {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.new-category-container button {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+.new-category-container button:hover {
+    background-color: #0056b3;
+}*/
+
+/* Category Table */
+.categories-table-container {
+    margin-top: 20px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.categories-table-container table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.categories-table-container th,
+.categories-table-container td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.categories-table-container th {
+    background-color: #f4f4f4;
+}
+
+.categories-table-container tr:hover {
+    background-color: #f9f9f9;
+}
+
+/* Edit & Delete Buttons */
+.category-actions button {
+    padding: 5px 10px;
+    margin: 2px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.category-actions .edit-btn {
+    background-color: #ffc107;
+    color: #333;
+}
+
+.category-actions .edit-btn:hover {
+    background-color: #e0a800;
+}
+
+.category-actions .delete-btn {
+    background-color: #dc3545;
+    color: white;
+}
+
+.category-actions .delete-btn:hover {
+    background-color: #c82333;
+}
+/* Pagination */
+.pagination-container { 
+    max-width: calc(100% - 18rem); /* Adjust for sidebar width */
+    margin-left: 18rem; /* Push right to make space for sidebar */
+    margin-top: 4rem;
+    display:flex;
+    justify-content: center !important;
+    align-items: center;
+    margin-top: 15px;
+    gap: 5px;
+    flex-wrap: wrap;
+    padding: 10px 0;
+    /*width: 100%;*/
+    overflow-x: auto;
+    white-space: nowrap;
+    border-top: 1px solid #615d5d;
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+.pagination-container-button {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    background-color: #f8f9fa;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.pagination-container-button.active {
+    background-color: #007bff;
+    color: rgb(10, 10, 10);
+    border-color: #007bff;
+}
+
+.pagination-container-button:hover {
+    background-color: #e9ecef;
+}
+
+/* Loading Indicator */
+.loading-text {
+    text-align: center;
+    font-size: 16px;
+    color: #777;
+    margin-top: 15px;
+}
+/* Edit Category Modal 
+.edit-category-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 500px;
+    max-width: 90%;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    z-index: 1000;
+    padding: 20px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.edit-category-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+/* Modal Animation 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -45%);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+/* Responsive Tweaks */
+@media (max-width: 1024px) {
+    .product-category-management-container {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 15px;
+    }
+
+    .top-bar {
+        margin-left: 0;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-sort-container {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .search-sort-container input {
+        min-width: 0;
+        flex: 1;
+    }
+
+    .search-sort-container select {
+        flex-shrink: 0;
+    }
+
+    .new-category-button {
+        width: 100%;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .edit-category-modal {
+        width: 90%;
+    }
+
+    .pagination-container {
+        justify-content: center;
+        overflow-x: auto;
+    }
+}
+
+/* Responsive Tweaks */
+@media (max-width: 768px) {
+    .product-category-management-container {
+        margin-left: 0;
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    .top-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .search-sort-container {
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+
+    .search-sort-container input,
+    .search-sort-container select {
+        width: 100%;
+    }
+
+    .new-category-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .edit-category-modal {
+        width: 90%;
+    }
+}

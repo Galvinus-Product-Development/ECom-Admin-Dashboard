@@ -1,0 +1,67 @@
+/* NewProduct.css */
+
+.new-product-container {
+  margin-left: 18rem;
+  padding: 20px;
+  min-height: calc(100vh - 4rem);
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  gap: 20px;
+}
+.new-product-container h1{
+  margin-top:50px;
+}
+
+.new-product-form {
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+}
+
+
+.product-details-section, .variant-details-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-group input, .form-group select, .form-group textarea {
+  flex: 1;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.submit-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #45a049;
+}
+
+.submit-button:disabled {
+  background-color: #ddd;
+  cursor: not-allowed;
+}
+
+.add-variant-section {
+  display:flex;
+  justify-content: center;
+  width:100%;
+  align-items: center;
+  margin: 30px;
+}

@@ -1,0 +1,56 @@
+/* Colour List Container */
+.colour-list {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  /* Table */
+  .colour-list table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  /* Table Headers */
+  .colour-list th {
+    background: #007bff;
+    color: white;
+    padding: 0.8rem;
+    text-align: left;
+  }
+  
+  /* Table Rows */
+  .colour-list td {
+    padding: 0.8rem;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  /* Table Actions */
+  .colour-list button {
+    background: #dc3545;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 0.5rem;
+  }
+  
+  .colour-list button:hover {
+    background: #c82333;
+  }
+  
+  /* Edit Button */
+  .colour-list button.edit {
+    background: #28a745;
+  }
+  
+  .colour-list button.edit:hover {
+    background: #218838;
+  }
+  

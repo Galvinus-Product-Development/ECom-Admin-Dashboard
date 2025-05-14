@@ -1,0 +1,239 @@
+  /* EditProduct.css */
+
+.edit-product-container {
+  margin-left: 18rem; /* Align with sidebar */
+  padding: 2rem;
+  min-height: calc(100vh - 4rem); /* Full height minus header */
+  padding: 2rem;
+  margin-top:50px ;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.edit-product-container h1,
+.edit-product-container h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.edit-product-container form,
+.edit-product-container .variant-container {
+  margin-bottom: 2rem;
+}
+
+.edit-product-container form input,
+.edit-product-container form textarea,
+.edit-product-container form select {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.edit-product-container button {
+  padding: 0.6rem 1.2rem;
+  background-color: #494774;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  
+}
+
+.edit-product-container button:hover {
+  background-color: #676684;
+}
+
+/* Variant Container Styling */
+.variant-container {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+/* Input Fields & Select Boxes Styling */
+.variant-container select,
+.variant-container input {
+  margin-bottom: 0.5rem;
+  padding: 0.4rem;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: calc(33.33% - 1rem);
+}
+
+.variant-container input[type="file"] {
+  width: auto;
+}
+
+/* Variant Buttons Styling */
+.variant-container button {
+  margin-top: 0.5rem;
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.variant-container button.update-variant {
+  background-color: #494774;
+  color: white;
+}
+
+.variant-container button.delete-variant {
+  background-color: #d9534f;
+  color: white;
+}
+
+.variant-container button.update-variant:hover {
+  background-color: #676684;
+}
+
+.variant-container button.delete-variant:hover {
+  background-color: #c9302c;
+}
+
+/* Image Display Container */
+.variant-container .images-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Individual Image Styling */
+.variant-container .images-container img {
+  width: 150px; /* Adjust as needed */
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+/* Delete Button for Images */
+.variant-container .images-container button {
+  margin-top: 0.5rem;
+  background-color: #494774;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.variant-container .images-container button:hover {
+  background-color: #676684;
+}
+
+.submit-product-button {
+  background-color: #494774;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.submit-product-button:hover {
+  background-color: #676684;
+}
+
+/* Image Handling Section */
+.existing-images {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+/* Individual Image Styling */
+.existing-images img {
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Delete Button Styling */
+.existing-images button {
+  margin-top: 0.5rem;
+  background-color: #494774;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.existing-images button:hover {
+  background-color: #676684;
+}
+
+
+/* Upload Button Styling */
+.upload-btn {
+  margin-top: 0.5rem;
+  background-color: #494774;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.upload-btn:hover {
+  background-color: #676684;
+}
+/* Add Variant Button Styling */
+.add-variant-btn {
+  background-color: #494774;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.add-variant-btn:hover {
+  background-color: #676684;
+}
+
+/* Cancel Button Styling */
+.cancel-btn {
+  background-color: #c84c4c;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 1rem;
+}
+
+.cancel-btn:hover {
+  background-color: #e05a5a;
+}
+
+/* Success Message */
+.success-message {
+  color: green;
+  margin-top: 1rem;
+}
+
+/* Error Message */
+.error-message {
+  color: red;
+  margin-top: 1rem;
+}

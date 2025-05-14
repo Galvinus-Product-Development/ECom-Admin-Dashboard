@@ -1,0 +1,130 @@
+.size-category-management {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    min-height: 300px;
+  }
+  
+  .size-category-management h2 {
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .size-category-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .size-category-form input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .size-category-form button {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .size-category-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .size-category-list li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+  }
+  .size-category-list li span {
+    flex-grow: 1;
+  }
+  
+  .size-category-list li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  .size-category-list button {
+    padding: 5px 8px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+  
+  .size-category-list .edit-btn {
+    background-color: #f0ad4e;
+    color: white;
+  }
+  
+  .size-category-list .delete-btn {
+    background-color: #dc3545;
+    color: white;
+  }
+
+  .size-category-list .add-options-btn {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  /* Modal Styling */
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+  
+  .modal-buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .modal-buttons button {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-buttons button:first-child {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .modal-buttons button:last-child {
+    background-color: #dc3545;
+    color: white;
+  }
+  

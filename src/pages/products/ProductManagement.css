@@ -1,51 +1,42 @@
-/* Product Management Container */
+/* General Layout */
 .product-management-container {
-    padding: 1.5rem;
-    margin-left: 18rem;
-    margin-top: 4rem;
-    font-family: "Lato", Arial, Helvetica, sans-serif;
+    margin-left: 18rem; /* Align with sidebar */
+    padding: 2rem;
+    min-height: calc(100vh - 4rem); /* Full height minus header */
   }
   
-  /* Title and Description */
-  .product-management-header {
-    margin-bottom: 2rem;
-  }
-  
-  .product-management-header h1 {
-    font-size: 1.5rem;
+  /* Heading */
+  .product-management-container h1 {
+    font-size: 1.8rem;
     font-weight: bold;
-    color: #2d3748;
-  }
-  
-  .product-management-header p {
-    color: #4a5568;
-    margin-top: 0.25rem;
-  }
-  
-  /* Filters and Actions Section */
-  .filters-actions-container {
     margin-bottom: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items: center;
-    justify-content: space-between;
   }
   
-  /* Filters Inputs Section */
-  .filters-inputs-container {
-    display: flex;
-    gap: 1rem;
-    flex: 1;
+  /* Search Bar */
+  .product-search {
+    width: 100%;
+    max-width: 400px;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 1rem;
   }
   
-  /* Product List Section */
-  .product-list-container {
-    /* Add specific styles for grid or list view */
+  /* Add Product Button */
+  .add-product-btn {
+    padding: 0.7rem 1.2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-bottom: 1rem;
   }
   
-  /* Pagination Section */
-  .pagination-container {
-    /* You can add custom styles here for pagination if necessary */
+  .add-product-btn:hover {
+    background-color: #0056b3;
   }
   
