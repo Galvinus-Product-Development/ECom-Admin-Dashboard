@@ -1,0 +1,215 @@
+.payment-settings {
+  font-family: "Lato", sans-serif;
+  padding: 1rem;
+  max-width: 800px;
+  color: #1d2a60;
+}
+
+.payment-settings h2 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.section {
+  background-color: #f7f7f8;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  margin-bottom: 0.75rem;
+}
+
+.primary-button {
+  background-color: #5b53f2;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.primary-button:hover {
+  background-color: #4b45e0;
+}
+
+.provider-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.provider-item {
+  background-color: white;
+  border: 1px solid #d4d4d8;
+  border-radius: 6px;
+  padding: 7px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.provider-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 500;
+}
+
+.logo {
+  background-color: #4b45e0;
+  color: white;
+  padding: 0.3rem 0.6rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.provider-actions button {
+  border: none;
+  border-radius: 6px;
+  padding: 7px;
+  font-weight: 300;
+  cursor: pointer;
+}
+
+.manage-button {
+  background-color: #5b53f2;
+  color: white;
+}
+
+.manage-button:hover {
+  background-color: #4b45e0;
+}
+
+.disable-button {
+  background-color: #d1d5db;
+  color: #1f2937;
+}
+
+.disable-button:hover {
+  background-color: #cbd5e1;
+}
+
+.hint {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin-top: 0.25rem;
+  display: block;
+}
+
+/* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+}
+
+.modal::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.modal h3 {
+  margin-bottom: 1rem;
+  color: #1d2a60;
+  font-size: 1.25rem;
+  text-align: center;
+}
+
+.form-section {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section label {
+  margin-bottom: 0.25rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.form-section input[type="text"] {
+  padding: 6px 10px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.checkbox-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.2rem;
+}
+
+.test-button,
+.save-button,
+.cancel-button {
+  flex: 1;
+
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+
+.test-button {
+  background-color: #13908cbd;
+  color: white;
+}
+
+.test-button:hover {
+  background-color: #0a504ebd;
+  color: white;
+}
+
+.save-button {
+  background-color: #4e2ce2;
+  color: white;
+}
+
+.save-button:hover {
+  background-color: #140653;
+  color: white;
+}
+
+.cancel-button {
+  background-color: red;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: rgb(200, 25, 25);
+  color: white;
+}

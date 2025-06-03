@@ -11,7 +11,7 @@ export const UserTable = ({
   setShowActivityModal,
   setUsers,
   handleViewActivity,
-  getRoleBadgeColor
+  getRoleBadgeColor,
 }) => {
   // const getRoleBadgeColor = (role) => {
   //   switch (role) {
@@ -33,9 +33,10 @@ export const UserTable = ({
   return (
     <div className="user-table-container">
       <table className="user-table">
-        <thead className="table-header">
+        <thead className="table-headers">
           <tr>
             <th className="table-header-th">User</th>
+            <th className="table-header-th">Email</th>
             <th className="table-header-th">Role</th>
             <th className="table-header-th">Status</th>
             <th className="table-header-th">Last Login</th>

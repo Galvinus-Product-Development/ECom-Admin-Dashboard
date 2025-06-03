@@ -1,25 +1,23 @@
 /* General styling for the UserManagement component */
 .user-management {
-    padding: 1.5rem;
-    margin-left: 18rem;
-    margin-top: 4rem;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-  }
-  
-  /* Styling for header, filters, table, and pagination */
-  .header {
-    margin-bottom: 2rem;
-  }
-  
-  .filters {
-    margin-bottom: 1.5rem;
-  }
-  
-  .user-table {
-    /* margin-bottom: 2rem; */
-  }
-  
-  .pagination {
-    margin-top: 1rem;
-  }
-  
+  padding: 1.5rem;
+  margin-top: 4rem;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+/* Styling for header, filters, table, and pagination */
+.header {
+  margin-bottom: 2rem;
+}
+
+.filters {
+  margin-bottom: 1.5rem;
+}
+
+.user-table {
+  /* margin-bottom: 2rem; */
+}
+
+.pagination {
+  margin-top: 1rem;
+}

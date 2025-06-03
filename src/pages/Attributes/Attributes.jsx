@@ -75,7 +75,7 @@ const AttributesPage = () => {
           <input
             type="text"
             placeholder="Search Attributes..."
-            className="search-input"
+            className="attribute-search-input"
           />
           <button onClick={handleAdd} className="add-attribute-button">
             Add Attribute
