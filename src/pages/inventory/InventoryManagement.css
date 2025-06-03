@@ -1,97 +1,83 @@
-/* Inventory Management Container */
-.inventory-management {
-    padding: 1.5rem; /* p-6 */
-    margin-left: 18rem;
-    margin-top: 4rem;
-    font-family: "Lato", Arial, Helvetica, sans-serif;
-  }
-  
-  /* Header Section */
-  .inventory-header {
-    margin-bottom: 2rem; /* mb-8 */
-  }
-  
-  .inventory-title {
-    font-size: 1.5rem; /* text-2xl */
-    font-weight: 700; /* font-bold */
-    color: #1f2937; /* text-gray-800 */
-  }
-  
-  .inventory-subtitle {
-    margin-top: 0.25rem; /* mt-1 */
-    color: #4b5563; /* text-gray-600 */
-  }
-  
-  /* Stock Status */
-  .stock-status {
-    padding: 0.25rem 0.5rem; /* px-2 py-1 */
-    border-radius: 0.25rem; /* rounded */
-    font-size: 0.875rem; /* text-sm */
-    font-weight: 500; /* font-medium */
-  }
-  
-  .stock-status.in-stock {
-    background-color: #d1fae5; /* bg-green-100 */
-    color: #065f46; /* text-green-800 */
-  }
-  
-  .stock-status.low-stock {
-    background-color: #fef3c7; /* bg-yellow-100 */
-    color: #92400e; /* text-yellow-800 */
-  }
-  
-  .stock-status.out-of-stock {
-    background-color: #fee2e2; /* bg-red-100 */
-    color: #991b1b; /* text-red-800 */
-  }
-  
-  .stock-status.default-stock {
-    background-color: #f3f4f6; /* bg-gray-100 */
-    color: #374151; /* text-gray-800 */
-  }
-  
-  /* Stock Indicator Icons */
-  .stock-indicator {
-    font-size: 1rem;
-  }
-  
-  .stock-indicator.in-stock {
-    color: #10b981; /* text-green-500 */
-  }
-  
-  .stock-indicator.low-stock {
-    color: #f59e0b; /* text-yellow-500 */
-  }
-  
-  .stock-indicator.out-of-stock {
-    color: #ef4444; /* text-red-500 */
-  }
-  
+/* Base reset for consistent box sizing */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  .stock-status {
-    padding: 4px 8px;
-    border-radius: 9999px;
-    font-size: 12px;
-    font-weight: 500;
-  }
-  
-  .stock-in-stock {
-    background-color: #d1fae5; /* Tailwind's bg-green-100 */
-    color: #065f46; /* Tailwind's text-green-800 */
-  }
-  
-  .stock-low-stock {
-    background-color: #fef3c7; /* Tailwind's bg-yellow-100 */
-    color: #92400e; /* Tailwind's text-yellow-800 */
-  }
-  
-  .stock-out-of-stock {
-    background-color: #fee2e2; /* Tailwind's bg-red-100 */
-    color: #991b1b; /* Tailwind's text-red-800 */
-  }
-  
-  .stock-default {
-    background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
-    color: #374151; /* Tailwind's text-gray-800 */
-  }
-  
+/* Full-page container */
+.inventory-management {
+  width: 100%;
+  min-height: 100vh;
+  padding: 1.5rem;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  overflow: auto; /* scrolls if content is larger than viewport */
+}
+
+/* Header Section */
+.inventory-header {
+  margin-bottom: 2rem;
+}
+
+.inventory-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.inventory-subtitle {
+  margin-top: 0.25rem;
+  color: #4b5563;
+}
+
+/* Stock Status */
+.stock-status {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Status Variants */
+.stock-status.in-stock {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.stock-status.low-stock {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.stock-status.out-of-stock {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.stock-status.default-stock {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+/* Optional icon styling */
+.stock-indicator {
+  font-size: 1rem;
+  margin-right: 4px;
+}
+
+.stock-indicator.in-stock {
+  color: #10b981;
+}
+
+.stock-indicator.low-stock {
+  color: #f59e0b;
+}
+
+.stock-indicator.out-of-stock {
+  color: #ef4444;
+}

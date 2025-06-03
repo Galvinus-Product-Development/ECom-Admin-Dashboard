@@ -1,0 +1,128 @@
+.attribute-modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.attribute-modal__content {
+  background-color: #fff;
+  padding: 20px 24px;
+  border-radius: 12px;
+  width: 450px;
+  max-width: 90%;
+  height: auto;
+  max-height: 85vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  animation: fadeInModal 0.25s ease;
+}
+
+.attribute-modal__title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.attribute-modal__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.attribute-modal__label {
+  display: block;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #333;
+}
+
+.attribute-modal__input {
+  width: 100%;
+  padding: 8px 10px;
+  margin-top: 4px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+.attribute-modal__value-group {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  gap: 8px;
+}
+
+.attribute-modal__add-btn {
+  margin-top: 8px;
+  background-color: #10b981;
+  color: white;
+  padding: 6px 14px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.attribute-modal__add-btn:hover {
+  background-color: #059669;
+}
+
+.attribute-modal__remove-btn {
+  background-color: #f87171;
+  color: white;
+  padding: 6px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.attribute-modal__remove-btn:hover {
+  background-color: #ef4444;
+}
+
+.attribute-modal__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 16px;
+  gap: 10px;
+}
+
+.attribute-modal__save-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 8px 18px;
+  border: none;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.attribute-modal__cancel-btn {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 8px 16px;
+  border: none;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+@keyframes fadeInModal {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}

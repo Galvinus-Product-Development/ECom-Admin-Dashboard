@@ -1,12 +1,13 @@
 // src/pages/brands/BrandManagement.jsx
-import { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import api from "../../services/api";
-import './BrandManagement.css';
-import BrandTable from './BrandTable';
-import EditBrand from './EditBrand';
+import "./BrandManagement.css";
+import NewBrand from "./NewBrand";
+import BrandTable from "./BrandTable";
+import EditBrand from "./EditBrand";
 
 const BrandManagement = () => {
   const navigate = useNavigate();
@@ -14,14 +15,15 @@ const BrandManagement = () => {
   const [brands, setBrands] = useState([]);
   const [selectedBrand, setSelectedBrand] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [showNewBrandModal, setShowNewBrandModal] = useState(false);
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
   const [brandsPerPage] = useState(10);
 
   // Search and Sort state
-  const [searchTerm, setSearchTerm] = useState('');
-  const [sortOption, setSortOption] = useState('name'); // default sort by name
+  const [searchTerm, setSearchTerm] = useState("");
+  const [sortOption, setSortOption] = useState("name");
 
   useEffect(() => {
     fetchBrands();
@@ -72,22 +74,27 @@ const BrandManagement = () => {
   };
 
   const handleSearchChange = (e) => setSearchTerm(e.target.value);
-  const handleSortChange = (e) => setSortOption(e.target.value);
+  // const handleSortChange = (e) => setSortOption(e.target.value);
 
   // Filter and sort brands using brand_name
-  const filteredBrands = brands.filter(brand =>
-    brand.brand_name.toLowerCase().includes(searchTerm.toLowerCase())
-  ).sort((a, b) => {
-    if (sortOption === 'name') {
-      return a.brand_name.localeCompare(b.brand_name);
-    }
-    return 0;
-  });
+  const filteredBrands = brands
+    .filter((brand) =>
+      brand.brand_name.toLowerCase().includes(searchTerm.toLowerCase())
+    )
+    .sort((a, b) => {
+      if (sortOption === "name") {
+        return a.brand_name.localeCompare(b.brand_name);
+      }
+      return 0;
+    });
 
   // Pagination logic
   const indexOfLastBrand = currentPage * brandsPerPage;
   const indexOfFirstBrand = indexOfLastBrand - brandsPerPage;
-  const currentBrands = filteredBrands.slice(indexOfFirstBrand, indexOfLastBrand);
+  const currentBrands = filteredBrands.slice(
+    indexOfFirstBrand,
+    indexOfLastBrand
+  );
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
@@ -96,19 +103,22 @@ const BrandManagement = () => {
       <h2>Brand Management</h2>
 
       {/* Top Bar: Search, Sort, New Brand Button */}
-      <div className="top-bar">
-        <div className="search-sort-container">
+      <div className="top-bar1">
+        <div className="brand-search-sort-container">
           <input
             type="text"
             placeholder="Search brands..."
             value={searchTerm}
             onChange={handleSearchChange}
           />
-          <select value={sortOption} onChange={handleSortChange}>
+          {/* <select value={sortOption} onChange={handleSortChange}>
             <option value="name">Sort by Name</option>
-          </select>
+          </select> */}
         </div>
-        <button className="new-brand-button" onClick={() => navigate('/brands/new-brand')}>
+        <button
+          className="new-brand-button"
+          onClick={() => setShowNewBrandModal(true)}
+        >
           + New Brand
         </button>
       </div>
@@ -121,19 +131,6 @@ const BrandManagement = () => {
         loading={loading}
       />
 
-      {/* Pagination */}
-      <div className="pagination-container">
-        {Array.from({ length: Math.ceil(filteredBrands.length / brandsPerPage) }).map((_, index) => (
-          <button
-            key={index}
-            onClick={() => paginate(index + 1)}
-            className={`pagination-button ${currentPage === index + 1 ? 'active' : ''}`}
-          >
-            {index + 1}
-          </button>
-        ))}
-      </div>
-
       {/* Edit Brand Modal */}
       {selectedBrand && (
         <div className="modal-overlay">
@@ -142,6 +139,18 @@ const BrandManagement = () => {
               brandId={selectedBrand.brand_id}
               onUpdateBrand={handleUpdateBrand}
               onClose={handleCloseEdit}
+            />
+          </div>
+        </div>
+      )}
+
+      {/* New Brand Modal */}
+      {showNewBrandModal && (
+        <div className="modal-overlay">
+          <div className="modal-content">
+            <NewBrand
+              onClose={() => setShowNewBrandModal(false)}
+              onBrandCreated={fetchBrands}
             />
           </div>
         </div>

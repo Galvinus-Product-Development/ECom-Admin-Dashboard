@@ -1,102 +1,155 @@
-/* BulkRestockModal.css */
 .modal-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .modal-container {
-    background-color: white;
-    border-radius: 8px;
-    padding: 24px;
-    width: 100%;
-    max-width: 400px;
-  }
-  
-  .modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .close-button {
-    padding: 4px;
-    border-radius: 4px;
-    background: transparent;
-    cursor: pointer;
-  }
-  
-  .close-button:hover {
-    background-color: #f3f3f3;
-  }
-  
-  .modal-body {
-    margin-bottom: 24px;
-  }
-  
-  .modal-text {
-    font-size: 14px;
-    color: #4a4a4a;
-  }
-  
-  .modal-label {
-    display: block;
-    font-size: 14px;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  
-  .modal-input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    outline: none;
-    font-size: 16px;
-  }
-  
-  .modal-input:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 3px #007bff;
-  }
-  
-  .modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 8px;
-  }
-  
-  .cancel-button, .confirm-button {
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .cancel-button {
-    border: 1px solid #ccc;
-    background-color: white;
-  }
-  
-  .cancel-button:hover {
-    background-color: #f3f3f3;
-  }
-  
-  .confirm-button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-  }
-  
-  .confirm-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .confirm-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-container {
+  background-color: white;
+  border-radius: 8px;
+  padding: 24px;
+  width: 100%;
+  max-width: 480px; /* increased width to prevent shrinking */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.close-button {
+  padding: 4px;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+
+.close-button:hover {
+  background-color: #f3f3f3;
+}
+
+.modal-body {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.restock-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.restock-select {
+  flex: 1;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  outline: none;
+}
+
+.restock-select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px #007bff;
+}
+
+.restock-input {
+  width: 80px;
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.restock-input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 3px #007bff;
+}
+
+.remove-button {
+  background: transparent;
+  border: none;
+  color: #d9534f;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 8px;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0; /* prevent button from shrinking */
+}
+
+.remove-button:hover {
+  background-color: #f8d7da;
+}
+
+.add-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: #007bff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: fit-content;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.add-button:hover {
+  background-color: #0056b3;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.cancel-button,
+.confirm-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.cancel-button {
+  border: 1px solid #ccc;
+  background-color: white;
+}
+
+.cancel-button:hover {
+  background-color: #f3f3f3;
+}
+
+.confirm-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+}
+
+.confirm-button:hover {
+  background-color: #0056b3;
+}
+
+.confirm-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}

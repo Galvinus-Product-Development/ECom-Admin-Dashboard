@@ -11,7 +11,7 @@ import {
   Shield,
   ShoppingCart,
   Tag,
-  Users
+  Users,
 } from "lucide-react";
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
@@ -23,6 +23,7 @@ const menuItems = [
   { icon: Package, label: "Products", path: "/products" },
   { icon: FolderOpen, label: "Product Category", path: "/product-categories" },
   { icon: Tag, label: "Brands", path: "/brands" },
+  { icon: Tag, label: "Attributes", path: "/attributes" },
   { icon: Palette, label: "Colours", path: "/colours" },
   { icon: Ruler, label: "Size", path: "/sizes" },
   { icon: ShoppingCart, label: "Orders", path: "/orders" },
@@ -39,7 +40,6 @@ const Sidebar = () => {
   return (
     <aside className="sidebar">
       <div className="container">
-
         <nav>
           {menuItems.map((item) => {
             const Icon = item.icon;

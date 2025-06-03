@@ -17,7 +17,7 @@ import OrderManagement from "./pages/orders/OrderManagement";
 import PaymentManagement from "./pages/Payment/PaymentManagement";
 import NewCategory from "./pages/product-categories/NewCategory";
 import ProductCategoryManagement from "./pages/product-categories/ProductCategoryManagement";
-import AddVariant from './pages/products/AddVariant';
+import AddVariant from "./pages/products/AddVariant";
 import EditProduct from "./pages/products/EditProduct";
 import NewProduct from "./pages/products/NewProduct";
 import ProductDetails from "./pages/products/ProductDetails";
@@ -26,6 +26,7 @@ import RolesManagement from "./pages/roles/RolesManagement";
 import SizeManagement from "./pages/sizes/SizeManagement";
 import UserManagement from "./pages/users/UserManagement";
 import store from "./redux/store";
+import Attributes from "./pages/attributes/Attributes";
 
 function App() {
   return (
@@ -38,7 +39,7 @@ function App() {
               path="/"
               element={
                 // <PrivateRoute>
-                  <Layout />
+                <Layout />
                 // </PrivateRoute>
               }
             >
@@ -46,15 +47,26 @@ function App() {
               <Route path="/users" element={<UserManagement />} />
               <Route path="/products" element={<ProductManagement />} />
               <Route path="/products/new-product" element={<NewProduct />} />
-              <Route path="/products/add-variant/:productId" element={<AddVariant />} /> 
+              <Route
+                path="/products/add-variant/:productId"
+                element={<AddVariant />}
+              />
               <Route path="/products/:productId" element={<ProductDetails />} />
-              <Route path="/products/edit/:productId" element={<EditProduct />} />
-              <Route path="/product-categories" element={<ProductCategoryManagement />} />
-              <Route path="/product-categories/new-category" element={<NewCategory />} />
+              <Route
+                path="/products/edit/:productId"
+                element={<EditProduct />}
+              />
+              <Route
+                path="/product-categories"
+                element={<ProductCategoryManagement />}
+              />
+              <Route
+                path="/product-categories/new-category"
+                element={<NewCategory />}
+              />
               <Route path="/brands" element={<BrandManagement />} />
-              <Route path="/brands/new-brand" element={<NewBrand />} />
-              <Route path="/colours" element={<ColourManagement />} /> 
-              <Route path="/sizes" element={<SizeManagement />} /> 
+              <Route path="/colours" element={<ColourManagement />} />
+              <Route path="/sizes" element={<SizeManagement />} />
               <Route path="/orders" element={<OrderManagement />} />
               <Route path="/inventory" element={<InventoryManagement />} />
               <Route path="/payments" element={<PaymentManagement />} />
@@ -64,6 +76,7 @@ function App() {
                 path="/notifications"
                 element={<NotificationManagement />}
               />
+              <Route path="/attributes" element={<Attributes />} />
               {/* Add other routes here */}
             </Route>
             <Route path="*" element={<Navigate to="/" replace />} />
