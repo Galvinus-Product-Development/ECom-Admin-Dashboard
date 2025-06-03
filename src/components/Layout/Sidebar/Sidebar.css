@@ -1,71 +1,49 @@
-/* Sidebar.css */
-
 .sidebar {
-  width: 18rem;
-  background-color: #5375bd;
+  width: 15rem;
   background-color: #fff;
-  /* color: white; */
+  margin-top: 34px;
   color: #1d2a60;
-  height: auto;
   position: fixed;
-  /* top: 0; */
+  top: 0;
   left: 0;
+  bottom: 0;
+  overflow-y: auto;
   font-family: "Lato", Arial, Helvetica, sans-serif;
-  margin: 0;
-  padding: 0;
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+.sidebar::-webkit-scrollbar {
+  width: 8px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 4px;
+}
+.sidebar::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 .sidebar .container {
-  padding: 1rem;
-  padding-right: 0;
-  padding-top: 0;
-}
-.sidebar .container{
-  /* mar-top: 1.5rem; */
+  padding: 1rem 0 1rem 0;
   margin-top: 1.5rem;
-  padding-left: 0;
-}
-.sidebar h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-bottom: 2rem;
 }
 
 .sidebar nav {
   display: flex;
   flex-direction: column;
 }
-.navbar-logo {
-  height: 2.5rem;
-  width: 2.5em;
-  color: #4f46e5;
-}
 
-.logo-container {
-  display: flex;
-  /* justify-content: center; */
-  height: 4rem;
-  align-items: center;
-  gap: 10px;
-}
 .sidebar .menu-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem;
-  padding-left: 16px;
-  /* border-radius: 0.5rem;  */
-  margin-bottom: 0.5rem;
-  transition: background-color 0.3s;
+  padding: 0.75rem 1rem;
   text-decoration: none;
-  /* color: #d1d5db;  */
   color: #1d2a60;
-}
-
-.navbar-title {
-  font-size: 1.25rem;
-  font-weight: bold;
-  color: #1f2937;
+  transition: background-color 0.3s;
+  margin-bottom: 0.5rem;
 }
 
 .sidebar .menu-item:hover {
@@ -80,4 +58,22 @@
 .sidebar .menu-item span {
   font-size: 1rem;
 }
-/* Sidebar container */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 4rem;
+}
+
+.navbar-logo {
+  height: 2.5rem;
+  width: 2.5rem;
+  color: #4f46e5;
+}
+
+.navbar-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #1f2937;
+}

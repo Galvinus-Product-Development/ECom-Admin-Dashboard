@@ -27,6 +27,7 @@ import SizeManagement from "./pages/sizes/SizeManagement";
 import UserManagement from "./pages/users/UserManagement";
 import store from "./redux/store";
 import Attributes from "./pages/attributes/Attributes";
+import PaymentSetting from "./pages/Payment_Setting/PaymentSetting";
 
 function App() {
   return (
@@ -70,6 +71,7 @@ function App() {
               <Route path="/orders" element={<OrderManagement />} />
               <Route path="/inventory" element={<InventoryManagement />} />
               <Route path="/payments" element={<PaymentManagement />} />
+              <Route path="/payment-setting" element={<PaymentSetting />} />
               <Route path="/Analytics" element={<AnalyticsManagement />} />
               <Route path="/roles" element={<RolesManagement />} />
               <Route
