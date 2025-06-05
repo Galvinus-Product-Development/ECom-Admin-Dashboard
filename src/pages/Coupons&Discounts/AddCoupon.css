@@ -1,0 +1,173 @@
+.coupon-container {
+  padding: 20px;
+
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.coupon-body {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.coupon-form {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 25px;
+  border-radius: 8px;
+  width: 60%;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: start;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.form-group div {
+  margin-top: 10px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #999;
+  display: block;
+}
+
+.currency {
+  font-weight: bold;
+  margin: 20px 0 10px;
+  color: #001f4d;
+}
+
+.currency span {
+  font-weight: normal;
+  color: #007acc;
+}
+
+.datetime-group {
+  display: flex;
+  gap: 30px;
+  padding: 10px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.datetime-group input {
+  border: 1px solid #ada9a9;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.radio-group {
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.radio-group div {
+  display: flex;
+
+  align-items: start;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  gap: 8px;
+}
+
+.usage-radio {
+  display: flex;
+  align-items: start;
+}
+
+.radio-group label {
+  font-weight: normal;
+  align-items: start;
+}
+
+.form-actions {
+  margin-top: 20px;
+}
+
+.save-button,
+.cancel-button {
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: none;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: #007acc;
+  color: white;
+}
+
+.cancel-button {
+  background-color: #ddd;
+  color: black;
+}
+
+.rules-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 35%;
+}
+
+.rules-header {
+  background-color: #3c9dad;
+  color: white;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.rules-box {
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.rules-box h4 {
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.rules-box p {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.add-rule-button {
+  background-color: #007acc;
+  color: white;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}

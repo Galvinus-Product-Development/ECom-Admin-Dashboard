@@ -28,6 +28,9 @@ import UserManagement from "./pages/users/UserManagement";
 import store from "./redux/store";
 import Attributes from "./pages/attributes/Attributes";
 import PaymentSetting from "./pages/Payment_Setting/PaymentSetting";
+import CouponAndDiscount from "./pages/Coupons&Discounts/CouponAndDiscount";
+import AddCoupon from "./pages/Coupons&Discounts/AddCoupon";
+import CustomerSupport from "./pages/CustomerSupport/CustomerSupport";
 
 function App() {
   return (
@@ -72,6 +75,13 @@ function App() {
               <Route path="/inventory" element={<InventoryManagement />} />
               <Route path="/payments" element={<PaymentManagement />} />
               <Route path="/payment-setting" element={<PaymentSetting />} />
+              <Route
+                path="/coupons&discounts"
+                element={<CouponAndDiscount />}
+              />
+
+              <Route path="/customerSupport" element={<CustomerSupport />} />
+              <Route path="/add-coupon" element={<AddCoupon />} />
               <Route path="/Analytics" element={<AnalyticsManagement />} />
               <Route path="/roles" element={<RolesManagement />} />
               <Route

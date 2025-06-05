@@ -1,0 +1,83 @@
+.total-order-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.total-order-modal-box {
+  background: #e0f7f7;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 600px;
+  border: 1px solid #000;
+}
+
+.total-order-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.total-order-divider {
+  margin-bottom: 1rem;
+}
+
+.total-order-form-section {
+  background: #fff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.total-order-label {
+  font-weight: 500;
+}
+
+.total-order-input {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.total-order-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.total-order-save-button {
+  background: #4da6ff;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.total-order-cancel-button {
+  background: #a9cfe7;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.total-order-delete-button {
+  background: red;
+  padding: 0.5rem 1rem;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}

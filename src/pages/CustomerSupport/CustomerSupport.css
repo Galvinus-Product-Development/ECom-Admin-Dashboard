@@ -1,0 +1,67 @@
+.customer-support-container {
+  padding: 1rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.customer-support-title {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.customer-support-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.customer-support-search {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.customer-support-filter-btn,
+.customer-support-category-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #ccc;
+  background-color: white;
+  color: black;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.customer-support-table {
+  border: 2px solid #cbe9f3;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #f7feff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 1rem;
+  padding: 0.75rem 0.5rem;
+  align-items: center;
+}
+
+.table-header {
+  font-weight: 600;
+  border-bottom: 2px solid #000;
+}
+
+.table-row {
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  margin-top: 0.75rem;
+  background-color: #fff;
+}
