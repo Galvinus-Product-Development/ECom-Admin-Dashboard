@@ -1,42 +1,40 @@
 /* General Layout */
 .product-management-container {
-    margin-left: 18rem; /* Align with sidebar */
-    padding: 2rem;
-    min-height: calc(100vh - 4rem); /* Full height minus header */
-  }
-  
-  /* Heading */
-  .product-management-container h1 {
-    font-size: 1.8rem;
-    font-weight: bold;
-    margin-bottom: 1.5rem;
-  }
-  
-  /* Search Bar */
-  .product-search {
-    width: 100%;
-    max-width: 400px;
-    padding: 0.5rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-  }
-  
-  /* Add Product Button */
-  .add-product-btn {
-    padding: 0.7rem 1.2rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin-bottom: 1rem;
-  }
-  
-  .add-product-btn:hover {
-    background-color: #0056b3;
-  }
-  
+  padding: 2rem;
+  min-height: calc(100vh - 4rem); /* Full height minus header */
+}
+
+/* Heading */
+.product-management-container h1 {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+/* Search Bar */
+.product-search {
+  width: 100%;
+  max-width: 400px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+/* Add Product Button */
+.add-product-btn {
+  padding: 0.7rem 1.2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+  margin-bottom: 1rem;
+}
+
+.add-product-btn:hover {
+  background-color: #0056b3;
+}

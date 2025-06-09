@@ -1,20 +1,18 @@
 /* Container Styling */
 .product-category-management-container {
-
-        max-width: calc(100% - 18rem); /* Adjust for sidebar width */
-        margin-left: 18rem; /* Push right to make space for sidebar */
-        margin-top: 4rem; /* Push down to make space for header */
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 8px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-    
+  margin-left: 3rem;
+  width: 100%;
+  /* margin-top: 5rem; */
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 /* Title */
 .product-category-management-container h2 {
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 20px;
-    color: #333;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
 }
