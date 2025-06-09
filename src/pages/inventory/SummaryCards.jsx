@@ -1,10 +1,10 @@
 import React from "react";
 import { Box, AlertTriangle, Truck, AlertCircle } from "lucide-react";
-import './SummaryCards.css';
+import "./SummaryCards.css";
 
 function SummaryCards({ inventory }) {
   return (
-    <div className="summary-cards-container">
+    <div className="summary-cards-containers">
       <div className="summary-card">
         <div className="summary-card-content">
           <div>
@@ -30,13 +30,16 @@ function SummaryCards({ inventory }) {
           <div>
             <p className="summary-card-label">Out of Stock</p>
             <p className="summary-card-value text-red">
-              {inventory.filter((item) => item.status === "out_of_stock").length}
+              {
+                inventory.filter((item) => item.status === "out_of_stock")
+                  .length
+              }
             </p>
           </div>
           <AlertCircle className="summary-card-icon text-red" size={24} />
         </div>
       </div>
-      <div className="summary-card">
+      {/* <div className="summary-card">
         <div className="summary-card-content">
           <div>
             <p className="summary-card-label">Pending Restocks</p>
@@ -49,7 +52,7 @@ function SummaryCards({ inventory }) {
           </div>
           <Truck className="summary-card-icon text-blue" size={24} />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

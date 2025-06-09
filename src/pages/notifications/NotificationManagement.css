@@ -1,70 +1,67 @@
 .notification-container {
-    padding: 1.5rem;
-    margin-left: 18rem;
-    margin-top: 4rem;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-  }
-  
-  .notification-header {
-    margin-bottom: 2rem;
-  }
-  
-  .notification-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1f2937; 
-  }
-  
-  .notification-description {
-    margin-top: 0.25rem;
-    color: #4b5563; /* Gray-600 */
-  }
-  
-  .icon-blue {
-    color: #3b82f6; /* Blue-500 */
-  }
-  
-  .icon-green {
-    color: #10b981; /* Green-500 */
-  }
-  
-  .icon-yellow {
-    color: #fbbf24; /* Yellow-500 */
-  }
-  
-  .icon-red {
-    color: #ef4444; /* Red-500 */
-  }
-  
-  .badge-blue {
-    background-color: #bfdbfe; /* Blue-100 */
-    color: #1e3a8a; /* Blue-800 */
-  }
-  
-  .badge-green {
-    background-color: #d1fae5; /* Green-100 */
-    color: #065f46; /* Green-800 */
-  }
-  
-  .badge-yellow {
-    background-color: #fef3c7; /* Yellow-100 */
-    color: #92400e; /* Yellow-800 */
-  }
-  
-  .badge-red {
-    background-color: #fee2e2; /* Red-100 */
-    color: #7f1d1d; /* Red-800 */
-  }
-  
-  .badge-gray {
-    background-color: #f3f4f6; /* Gray-100 */
-    color: #4b5563; /* Gray-800 */
-  }
-  
+  padding: 1.5rem;
 
+  margin-top: 4rem;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
 
+.notification-header {
+  margin-bottom: 2rem;
+}
 
-  /* Common badge styling */
+.notification-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #1f2937;
+}
+
+.notification-description {
+  margin-top: 0.25rem;
+  color: #4b5563; /* Gray-600 */
+}
+
+.icon-blue {
+  color: #3b82f6; /* Blue-500 */
+}
+
+.icon-green {
+  color: #10b981; /* Green-500 */
+}
+
+.icon-yellow {
+  color: #fbbf24; /* Yellow-500 */
+}
+
+.icon-red {
+  color: #ef4444; /* Red-500 */
+}
+
+.badge-blue {
+  background-color: #bfdbfe; /* Blue-100 */
+  color: #1e3a8a; /* Blue-800 */
+}
+
+.badge-green {
+  background-color: #d1fae5; /* Green-100 */
+  color: #065f46; /* Green-800 */
+}
+
+.badge-yellow {
+  background-color: #fef3c7; /* Yellow-100 */
+  color: #92400e; /* Yellow-800 */
+}
+
+.badge-red {
+  background-color: #fee2e2; /* Red-100 */
+  color: #7f1d1d; /* Red-800 */
+}
+
+.badge-gray {
+  background-color: #f3f4f6; /* Gray-100 */
+  color: #4b5563; /* Gray-800 */
+}
+
+/* Common badge styling */
 .badge {
   padding: 8px 8px;
   border-radius: 50%;

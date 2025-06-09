@@ -1,6 +1,7 @@
 .inventory-table-container {
   width: 100%;
   background-color: white;
+  padding: 10px;
   border-radius: 0.5rem;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -52,22 +53,22 @@
   background-color: white;
 }
 
-.table-body td {
+.inventory-table-body td {
   text-align: center;
   padding: 0.5rem 0.75rem;
   font-size: 0.75rem;
   white-space: nowrap;
   vertical-align: middle;
-  max-width: 200px;
+  max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-.table-row {
+.inventory-table-row {
   transition: background-color 0.2s;
 }
 
-.table-row:hover {
+.inventory-table-row:hover {
   background-color: #f9fafb;
 }
 

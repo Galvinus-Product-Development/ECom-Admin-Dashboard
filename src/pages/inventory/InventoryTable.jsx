@@ -82,15 +82,15 @@ const InventoryTable = ({
                   <ArrowUpDown size={14} />
                 </button>
               </th>
-              <th className="inventory-table-header">Location</th>
+              {/* <th className="inventory-table-header">Location</th> */}
               <th className="inventory-table-header">Status</th>
               <th className="inventory-table-header">Last Restocked</th>
               <th className="inventory-table-header">Actions</th>
             </tr>
           </thead>
-          <tbody className="table-body">
+          <tbody className="inventory-table-body">
             {paginatedInventory.map((item, id) => (
-              <tr key={id} className="table-row">
+              <tr key={id} className="inventory-table-row">
                 <td className="row-checkbox">
                   <input
                     type="checkbox"
@@ -129,7 +129,7 @@ const InventoryTable = ({
                     <span className="stock-count">{item.stock} units</span>
                   </div>
                 </td>
-                <td className="location-cell">{item.locationCode}</td>
+                {/* <td className="location-cell">{item.locationCode}</td> */}
                 <td className="status-cell">
                   <span
                     className={`status-tag ${getStockStatusColor(item.status)}`}
