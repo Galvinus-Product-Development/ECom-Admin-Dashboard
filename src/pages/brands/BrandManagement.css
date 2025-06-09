@@ -1,94 +1,172 @@
 .brand-management-container {
-    max-width: calc(100% - 18rem); /* Adjust for sidebar width */
-    margin-left: 18rem; /* Push right to make space for sidebar */
-    margin-top: 4rem; /* Push down to make space for header */
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    font-family: Arial, sans-serif;
+  min-height: 100vh;
+  padding: 18px;
+  background-color: #ffffff;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-management-container h2 {
+  margin: 1rem;
+  font-size: 1.75rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.top-bar1 {
+  width: 100%;
+  background: #ffffff;
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* align button vertically center */
+  gap: 10px;
+  margin-bottom: 15px;
+  flex-wrap: nowrap; /* prevent wrapping to keep layout consistent */
+}
+.brand-search-sort-container {
+  display: flex;
+  flex: 0 0 60%; /* take 60% width */
+  gap: 10px;
+  align-items: center; /* vertical center for input */
+}
+
+.brand-search-sort-container input {
+  width: 100%; /* take full container width */
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.4;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.brand-search-sort-container input:focus {
+  border-color: #3b82f6;
+  background-color: #fff;
+}
+
+.new-brand-button {
+  flex: 0 0 40%; /* take 40% width */
+  padding: 12px 18px;
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  text-align: center;
+}
+.new-brand-button:hover {
+  background-color: #2563eb;
+}
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pagination-button {
+  padding: 8px 14px;
+  border: 1px solid #d1d5db;
+  background-color: #f9fafb;
+  color: #374151;
+  font-size: 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.pagination-button:hover {
+  background-color: #e5e7eb;
+}
+
+.pagination-button.active {
+  background-color: #3b82f6;
+  color: white;
+  border-color: #3b82f6;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease-in-out;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 12px;
+  width: 500px;
+  max-width: 90%;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  animation: slideUp 0.3s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .brand-management-container h2 {
-    margin-bottom: 15px;
-    color: #333;
+  to {
+    opacity: 1;
   }
-  
-  .top-bar {
-    display:flex;
-    justify-content: space-between;
-    margin: 40px !important;
-    align-items: center;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
   }
-  
-  .search-sort-container {
-    display: flex;
-    gap: 20px;
+  to {
+    transform: translateY(0);
+    opacity: 1;
   }
-  
-  .search-sort-container input,
-  .search-sort-container select {
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .top-bar1 {
+    flex-wrap: wrap; /* allow wrapping on smaller screens */
   }
-  
+  .brand-search-sort-container,
   .new-brand-button {
-    padding: 8px 12px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
+    flex: 1 1 100%; /* full width on small screens */
   }
-  
-  .new-brand-button:hover {
-    background-color: #0056b3;
+  .new-brand-button {
+    margin-top: 10px;
   }
-  
-  .pagination-container {
-    display: flex;
-    justify-content: center;
-    width:100%;
-    gap: 5px;
-    margin: 18px !important;
-    border-top: none;
+}
+
+@media (max-width: 480px) {
+  .brand-management-container {
+    padding: 12px;
   }
-  
-  .pagination-button {
-    padding: 6px 10px;
-    border: 1px solid #ccc;
-    background-color: #817c7c;
-    color:#007bff;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  
-  .pagination-button.active {
-    background-color: #007bff;
-    color: rgb(21, 7, 7);
-    border-color: #007bff;
-  }
-  
-  .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-  }
-  
+
   .modal-content {
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    width: 500px;
-    max-width: 90%;
+    padding: 16px 20px;
   }
-  
+
+  .brand-management-container h2 {
+    font-size: 1.25rem;
+  }
+}

@@ -25,7 +25,7 @@ export default function FiltersAndSearch({
               setSearch(e.target.value);
               setCurrentPage(1);
             }}
-            className="search-input"
+            className="inventory-search-input"
           />
         </div>
         <select
@@ -41,15 +41,17 @@ export default function FiltersAndSearch({
           <option value="low_stock">Low Stock</option>
           <option value="out_of_stock">Out of Stock</option>
         </select>
+
+        <button
+          onClick={() => {
+            setShowRestockModal(true);
+          }}
+          className="restock-button"
+        >
+          <RefreshCw size={20} />
+          Bulk Restock ({selectedItems.length})
+        </button>
       </div>
-      <button
-        onClick={() => setShowRestockModal(true)}
-        disabled={selectedItems.length === 0}
-        className="restock-button"
-      >
-        <RefreshCw size={20} />
-        Bulk Restock ({selectedItems.length})
-      </button>
     </div>
   );
 }

@@ -1,8 +1,11 @@
 /* Layout container */
 .layout-container {
-    min-height: 100vh;
-    background-color: #f3f4f6; /* Tailwind equivalent of bg-gray-100 */
-    width: 100%;
-  }
+  min-height: 100vh;
+  background-color: #f3f4f6; /* Tailwind equivalent of bg-gray-100 */
+  width: 100%;
+}
 
-  
+.main-content {
+  margin-top: 4rem;
+  margin-left: 15rem;
+}

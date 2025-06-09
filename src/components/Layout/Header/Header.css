@@ -1,88 +1,83 @@
 /* Header.css */
 
 .header {
-    height: 4rem;
-    background-color: white;
-    border-bottom: 1px solid #e0e0e0;
-    position: fixed;
-    top: 0;
-    right: 0;
-    /* left: 18rem;  */
-    z-index: 10;
-    font-family: 'Lato', Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    box-shadow: 0 1px 2px #0000001a;
-  }
-  
-  .header .container {
-    height: 100%;
-    /* width: 100%; */
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-  
-  .header .search-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .header .search-input {
-    padding: 8px 16px;
-    border-radius: 0.5rem;
-    border: 1px solid #ccc;
-    outline: none;
-    font-size: 100%;
-    width: 214px;
-  }
-  
-  .header .search-input:focus {
-    border-color: #3b82f6; /* Focus ring blue color */
-    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Focus shadow */
-  }
-  
-  .header .icons-container {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  
-  .header .icon-button {
-    /* padding: 0.5rem; */
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .header .icon-button:hover {
-    background-color: #f3f4f6; /* hover background color */
-  }
-  
-  .header .user-container {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  
-  .header .user-avatar {
-    width: 37px;
-    height: 37px;
-    background-color: #e0e0e0;
-    border-radius: 9999px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .header .user-name {
-    font-weight: bolder; /* medium font */
-  }
-  
+  height: 4rem;
+  background-color: white;
+  border-bottom: 1px solid #e0e0e0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  /* left: 18rem;  */
+  z-index: 10;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  box-shadow: 0 1px 2px #0000001a;
+}
+
+.header .container {
+  height: 100%;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .search-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header .navbar-search-input {
+  padding: 2px;
+  width: 250px;
+  border-radius: 0.5rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  outline: none;
+}
+
+.header .navbar-search-input:focus {
+  border-color: #3b82f6; /* Focus ring blue color */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5); /* Focus shadow */
+}
+
+.header .icons-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header .icon-button {
+  /* padding: 0.5rem; */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .icon-button:hover {
+  background-color: #f3f4f6; /* hover background color */
+}
+
+.header .user-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header .user-avatar {
+  width: 37px;
+  height: 37px;
+  background-color: #e0e0e0;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

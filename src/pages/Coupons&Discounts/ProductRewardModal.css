@@ -1,0 +1,96 @@
+.product-reward-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.product-reward-modal {
+  background-color: #d6f0f2;
+  border: 2px solid #444;
+  border-radius: 6px;
+  padding: 2rem;
+  width: 500px;
+  max-width: 95%;
+}
+
+.product-reward-title {
+  margin-top: 0;
+  font-weight: bold;
+  color: #222;
+}
+
+.product-reward-divider {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px solid #999;
+}
+
+.product-reward-form-box {
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.product-reward-form-group {
+  margin-bottom: 1.2rem;
+}
+
+.product-reward-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.product-reward-inline-fields {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.product-reward-select,
+.product-reward-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  flex: 1;
+}
+
+.product-reward-button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.product-reward-save-btn {
+  background-color: #4cb9f9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.product-reward-cancel-btn {
+  background-color: #87ceeb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.product-reward-delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}

@@ -1,81 +1,80 @@
 /* Filters and Search Container */
 .filter-container {
-    margin-bottom: 1.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1rem;
-    justify-content: space-between;
-  }
-  
-  /* Search Input Wrapper */
-  .filters-search-wrapper {
-    display: flex;
-    gap: 1rem;
-    flex: 1;
-  }
-  
-  /* Search Input Field */
-  .search-input-wrapper {
-    position: relative;
-    flex: 1;
-    max-width: 25rem; /* Adjust width */
-  }
-  
-  .search-icon {
-    position: absolute;
-    left: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #a0aec0; /* Gray-400 */
-  }
-  
-  .search-input {
-    padding-left: 2.5rem; /* Space for the search icon */
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    width: 100%;
-    border: 1px solid #cbd5e0; /* Border */
-    border-radius: 0.5rem;
-    outline: none;
-    transition: all 0.2s ease;
-  }
-  
-  .search-input:focus {
-    border-color: #3b82f6; /* Blue-500 */
-    box-shadow: 0 0 0 2px #bfdbfe; /* Focus Ring */
-  }
-  
-  /* Filter Dropdown */
-  .filter-dropdown {
-    padding: 0.5rem 1rem;
-    border: 1px solid #cbd5e0;
-    border-radius: 0.5rem;
-    outline: none;
-    transition: all 0.2s ease;
-  }
-  
-  .filter-dropdown:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 2px #bfdbfe;
-  }
-  
-  /* Restock Button */
-  .restock-button {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background-color: #2563eb; /* Blue-600 */
-    color: #ffffff; /* White */
-    border: none;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s ease;
-    width: fit-content;
-  }
-  
-  .restock-button:hover {
-    background-color: #1d4ed8; /* Blue-700 */
-  }
-  
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+/* Search Input Wrapper */
+.filters-search-wrapper {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+/* Search Input Field */
+.search-input-wrapper {
+  position: relative;
+  flex: 1;
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #a0aec0; /* Gray-400 */
+}
+
+.inventory-search-input {
+  padding-left: 2.5rem; /* Space for the search icon */
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  border: 1px solid #cbd5e0; /* Border */
+  color: black;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.search-input:focus {
+  border-color: #3b82f6; /* Blue-500 */
+  box-shadow: 0 0 0 2px #bfdbfe; /* Focus Ring */
+}
+
+/* Filter Dropdown */
+.filter-dropdown {
+  padding: 0.5rem 1rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 0.5rem;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.filter-dropdown:focus {
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px #bfdbfe;
+}
+
+/* Restock Button */
+.restock-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #2563eb; /* Blue-600 */
+  color: #ffffff; /* White */
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  width: fit-content;
+}
+
+.restock-button:hover {
+  background-color: #1d4ed8; /* Blue-700 */
+}

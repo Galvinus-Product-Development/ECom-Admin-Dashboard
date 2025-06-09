@@ -7,6 +7,7 @@ import {
   Ban,
   Unlock,
   Shield,
+  Delete,
 } from "lucide-react";
 
 export const TableRow = ({
@@ -19,7 +20,7 @@ export const TableRow = ({
   setShowActivityModal,
   users,
   setUsers,
-  handleViewActivity
+  handleViewActivity,
 }) => (
   <tr className="table-row-hover">
     {" "}
@@ -31,9 +32,13 @@ export const TableRow = ({
         </div>
         <div className="ml-4">
           <div className="user-name">{user.name}</div>
-          <div className="user-email">{user.email}</div>
         </div>
       </div>
+    </td>
+    <td className="table-cell">
+      <span className={`badge ${getRoleBadgeColor(user.email)}`}>
+        {user.email.charAt(0).toUpperCase() + user.email.slice(1)}
+      </span>
     </td>
     <td className="table-cell">
       <span className={`badge ${getRoleBadgeColor(user.role)}`}>
@@ -65,7 +70,7 @@ export const TableRow = ({
           onClick={() => {
             setSelectedUser(user);
             setShowActivityModal(true);
-            handleViewActivity(user)
+            handleViewActivity(user);
           }}
           title="View Activity"
         >
@@ -94,6 +99,9 @@ export const TableRow = ({
           title="Manage Roles"
         >
           <Shield size={16} />
+        </button>
+        <button className="button" title="Delete">
+          <Delete size={16} />
         </button>
       </div>
     </td>

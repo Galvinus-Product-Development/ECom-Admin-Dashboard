@@ -1,0 +1,102 @@
+.buyxgety-reward-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.buyxgety-reward-modal {
+  background-color: #d6f0f2;
+  border: 2px solid #444;
+  border-radius: 6px;
+  padding: 2rem;
+  width: 500px;
+  max-width: 95%;
+}
+
+.buyxgety-reward-title {
+  margin-top: 0;
+  font-weight: bold;
+  color: #222;
+}
+
+.buyxgety-reward-divider {
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: none;
+  border-top: 1px solid #999;
+}
+
+.buyxgety-reward-subdivider {
+  margin: 0.5rem 0;
+  border: none;
+  border-top: 1px solid #ccc;
+}
+
+.buyxgety-reward-form-box {
+  background-color: #fff;
+  padding: 1.2rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+}
+
+.buyxgety-reward-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.buyxgety-reward-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.buyxgety-reward-sublabel {
+  display: block;
+  margin-top: 0.8rem;
+  margin-bottom: 0.4rem;
+  font-weight: 500;
+}
+
+.buyxgety-reward-input {
+  width: 100%;
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buyxgety-reward-button-group {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.buyxgety-reward-save-btn {
+  background-color: #4cb9f9;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.buyxgety-reward-cancel-btn {
+  background-color: #87ceeb;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}
+
+.buyxgety-reward-delete-btn {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+}

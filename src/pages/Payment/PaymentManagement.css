@@ -22,6 +22,34 @@
   margin-top: 0.25rem;
 }
 
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 9999px;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.status-completed {
+  background-color: #d1fae5; /* Tailwind's bg-green-100 */
+  color: #065f46; /* Tailwind's text-green-800 */
+}
+
+.status-pending {
+  background-color: #fef3c7; /* Tailwind's bg-yellow-100 */
+  color: #92400e; /* Tailwind's text-yellow-800 */
+}
+
+.status-failed {
+  background-color: #fee2e2; /* Tailwind's bg-red-100 */
+  color: #991b1b; /* Tailwind's text-red-800 */
+}
+
+.status-refunded,
+.status-default {
+  background-color: #f3f4f6; /* Tailwind's bg-gray-100 */
+  color: #374151; /* Tailwind's text-gray-800 */
+}
+
 /* Responsive breakpoints */
 @media (max-width: 1024px) {
   .payment-management {

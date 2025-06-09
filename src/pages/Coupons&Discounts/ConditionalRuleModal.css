@@ -1,0 +1,89 @@
+.conditional-rule-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.conditional-rule-modal-box {
+  background-color: #e0f7f7;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 2rem;
+  width: 600px;
+}
+
+.conditional-rule-title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.conditional-rule-divider {
+  margin-bottom: 1rem;
+}
+
+.conditional-rule-form-section {
+  background: #ffffff;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.conditional-rule-label {
+  font-weight: 500;
+}
+
+.conditional-rule-input {
+  padding: 0.5rem;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.conditional-rule-subheading {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+}
+
+.conditional-rule-form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.conditional-rule-save-button {
+  background: #4da6ff;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.conditional-rule-cancel-button {
+  background: #a9cfe7;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+.conditional-rule-delete-button {
+  background: red;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: white;
+  border: none;
+  cursor: pointer;
+}

@@ -4,7 +4,7 @@ import SummaryCards from "./SummaryCards";
 import FiltersAndSearch from "./FiltersAndSearch";
 import InventoryTable from "./InventoryTable";
 import Pagination from "./Pagination";
-import BulkRestockModal from "./BulkRestockModel";
+import BulkRestockModel from "./BulkRestockModel";
 import "./InventoryManagement.css";
 
 const generateMockInventory = (count) => {
@@ -26,7 +26,6 @@ const generateMockInventory = (count) => {
         : "in_stock",
   }));
 };
-
 
 const mockProducts = [
   {
@@ -156,7 +155,6 @@ const InventoryManagement = () => {
         return "stock-status stock-default";
     }
   };
-  
 
   const getStockIndicator = (item) => {
     if (item.stock <= 0)
@@ -214,7 +212,7 @@ const InventoryManagement = () => {
         handlePageChange={handlePageChange}
       />
 
-      <BulkRestockModal
+      <BulkRestockModel
         showRestockModal={showRestockModal}
         setShowRestockModal={setShowRestockModal}
         selectedItems={selectedItems}
@@ -227,6 +225,3 @@ const InventoryManagement = () => {
 };
 
 export default InventoryManagement;
-
-
-

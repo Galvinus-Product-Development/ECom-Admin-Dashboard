@@ -1,0 +1,103 @@
+.view-ticket-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.view-ticket-modal {
+  background-color: #ffffff;
+  width: 500px;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid #000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.ticket-details {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1rem;
+  font-size: 14px;
+}
+
+.customer-message {
+  background-color: #b8e6f4;
+  padding: 10px;
+  border-radius: 6px;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.customer-message strong {
+  font-weight: bold;
+}
+
+.customer-message span {
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.reply-section {
+  margin-bottom: 1rem;
+}
+
+.reply-section textarea {
+  width: 100%;
+  height: 60px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  resize: none;
+  margin-top: 5px;
+}
+
+.ticket-send-button {
+  margin-top: 8px;
+  padding: 6px 12px;
+  background-color: white;
+  color: black;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+.assign-btn {
+  background-color: #58b4d4;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.inprogress-btn {
+  background-color: #fbb040;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.ticket-close-btn {
+  background-color: #e74c3c;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}

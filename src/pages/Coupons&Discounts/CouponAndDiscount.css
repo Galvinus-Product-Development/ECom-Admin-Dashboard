@@ -1,0 +1,78 @@
+.coupon-container {
+  padding: 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.coupon-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.coupon-header h2 {
+  font-size: 20px;
+}
+
+.create-btn {
+  background-color: #4ca3af;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.coupon-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(72, 176, 185, 0.15);
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1.5fr 1fr 1fr 2fr 1fr 1fr;
+  padding: 0.75rem 1rem;
+  align-items: center;
+}
+
+.table-header {
+  background-color: #fefefe;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.table-row {
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: green;
+  font-weight: 500;
+}
+
+.status .dot {
+  width: 8px;
+  height: 8px;
+  background-color: green;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  color: #333;
+}

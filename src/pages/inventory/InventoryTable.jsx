@@ -19,7 +19,7 @@ const InventoryTable = ({
     <div className="inventory-table-container">
       <div className="table-scroll">
         <table className="inventory-table">
-          <thead className="table-header">
+          <thead className="inventory-table-header">
             <tr>
               <th className="header-checkbox">
                 <input
@@ -82,14 +82,14 @@ const InventoryTable = ({
                   <ArrowUpDown size={14} />
                 </button>
               </th>
-              <th className="table-header">Location</th>
-              <th className="table-header">Status</th>
-              <th className="table-header">Last Restocked</th>
-              <th className="table-header">Actions</th>
+              <th className="inventory-table-header">Location</th>
+              <th className="inventory-table-header">Status</th>
+              <th className="inventory-table-header">Last Restocked</th>
+              <th className="inventory-table-header">Actions</th>
             </tr>
           </thead>
           <tbody className="table-body">
-            {paginatedInventory.map((item,id) => (
+            {paginatedInventory.map((item, id) => (
               <tr key={id} className="table-row">
                 <td className="row-checkbox">
                   <input
