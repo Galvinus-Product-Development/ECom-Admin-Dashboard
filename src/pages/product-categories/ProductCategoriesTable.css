@@ -1,9 +1,6 @@
 /* ProductCategoriesTable.css */  
 
 .product-categories-table {  
-  max-width: calc(100% - 18rem); /* Adjust for sidebar width */
-  margin-left: 18rem; /* Push right to make space for sidebar */
-  margin-top: 4rem; /* Push down to make space for header */
   padding: 20px;
   }  
   

@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowUpDown } from 'lucide-react';
 import './PaymentsTable.css';
 
@@ -23,7 +22,7 @@ const PaymentsTable = ({
             <tr>
               <th className="payments-table-header-cell">
                 <button
-                  className="payments-table-sort-btn"
+                  className="payments-table-sort-btn" 
                   onClick={() => {
                     if (sortBy === 'date') {
                       setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc');
@@ -37,9 +36,9 @@ const PaymentsTable = ({
                   <ArrowUpDown size={14} />
                 </button>
               </th>
-              <th className="payments-table-header-cell">Payment Details</th>
-              <th className="payments-table-header-cell">Customer</th>
-              <th className="payments-table-header-cell">
+              <th className="payments-table-header-cell" >Payment Details</th>
+              <th className="payments-table-header-cell"  >Customer</th>
+              <th className="payments-table-header-cell"  >
                 <button
                   className="payments-table-sort-btn"
                   onClick={() => {
@@ -71,17 +70,17 @@ const PaymentsTable = ({
                   <ArrowUpDown size={14} />
                 </button>
               </th>
-              <th className="payments-table-header-cell">Actions</th>
+              <th className="payments-table-header-cell" >Actions</th>
             </tr>
           </thead>
           <tbody className="payments-table-body">
             {paginatedPayments.map((payment) => (
               <tr key={payment.id} className="payments-table-row">
-                <td className="payments-table-cell">
+                <td className="payments-table-cell" data-label="Date & Time">
                   <div className="payments-table-text">{payment.date.toLocaleDateString()}</div>
                   <div className="payments-table-text-muted">{payment.date.toLocaleTimeString()}</div>
                 </td>
-                <td className="payments-table-cell">
+                <td className="payments-table-cell" data-label="Payment Details">
                   <div className="payments-table-flex">
                     <div className="payments-table-icon">{getPaymentMethodIcon(payment.method)}</div>
                     <div>
@@ -90,19 +89,19 @@ const PaymentsTable = ({
                     </div>
                   </div>
                 </td>
-                <td className="payments-table-cell">
+                <td className="payments-table-cell" data-label="Customer">
                   <div className="payments-table-text">{payment.customerName}</div>
                   <div className="payments-table-text-muted">{payment.customerEmail}</div>
                 </td>
-                <td className="payments-table-cell text-sm font-medium">
+                <td className="payments-table-cell text-sm font-medium" data-label="Amount">
                   {formatCurrency(payment.amount, payment.currency)}
                 </td>
-                <td className="payments-table-cell">
+                <td className="payments-table-cell"  data-label="Status">
                   <span className={`payments-table-status ${getStatusBadgeColor(payment.status)}`}>
                     {payment.status.charAt(0).toUpperCase() + payment.status.slice(1)}
                   </span>
                 </td>
-                <td className="payments-table-cell">
+                <td className="payments-table-cell" data-label="Actions">
                   <div className="payments-table-actions">
                     <button
                       onClick={() => {
@@ -116,6 +115,8 @@ const PaymentsTable = ({
                     </button>
                     <button
                       onClick={() => {
+                        console.log('Details clicked:', payment);
+
                         setSelectedPayment(payment);
                         setShowDetailsModal(true);
                       }}

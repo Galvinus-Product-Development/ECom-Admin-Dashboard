@@ -1,4 +1,3 @@
-import React from "react";
 import "./SummaryCard.css"; // Importing the CSS file
 
 const SummaryCard = ({ title, value, color }) => (

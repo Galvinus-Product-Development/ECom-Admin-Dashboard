@@ -50,65 +50,40 @@
   object-fit: cover;
   border-radius: 5px;
 }
-
-/* Actions Column */
-.product-table td.product-actions {
+.product-actions {
   display: flex;
-  gap: 0.5rem;
-  flex-direction: column;
-  justify-content: space-between;
+  border-bottom: none !important;
+  margin:18px;
+  overflow: visible !important;
+  justify-content: center;
   align-items: center;
-  white-space: nowrap;
 }
 
-/* Action Buttons */
-.product-actions button {
-  padding: 0.4rem 0.6rem;
-  font-size: 0.8rem;
+.icon-btn {
+  background: transparent;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: 0.3s;
+  padding: 4px;
+  transition: transform 0.2s, color 0.2s;
 }
 
-  
-  /* View Button */
-  .view-btn {
-    background: #28a745;
-    color: white;
-  }
-  
-  .view-btn:hover {
-    background: #218838;
-  }
-  
-  /* Edit Button */
-  .edit-btn {
-    background: #ffc107;
-    color: black;
-  }
-  
-  .edit-btn:hover {
-    background: #e0a800;
-  }
-  
-  /* Delete Button */
-  .delete-btn {
-    background: #dc3545;
-    color: white;
-  }
-  
-  .delete-btn:hover {
-    background: #c82333;
-  }
-  
-  /* Restore Button */
-  .restore-btn {
-    background: #17a2b8;
-    color: white;
-  }
-  
-  .restore-btn:hover {
-    background: #138496;
-  }
-  
+.icon-btn svg {
+  stroke-width: 2;
+  color: #555;
+}
+
+.icon-btn:hover svg {
+  transform: scale(1.1);
+}
+
+.view-btn svg {
+  color: #007bff;
+}
+
+.edit-btn svg {
+  color: #28a745;
+}
+
+.delete-btn svg {
+  color: #dc3545;
+}

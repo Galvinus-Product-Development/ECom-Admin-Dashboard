@@ -1,13 +1,20 @@
+import PropTypes from 'prop-types';
 import './Pagination.css';
 
-const Pagination = ({ currentPage, ITEMS_PER_PAGE, filteredOrders, totalPages, handlePageChange }) => {
+const Pagination = ({
+  currentPage,
+  itemsPerPage,
+  totalItems,
+  handlePageChange,
+}) => {
+  const totalPages = Math.ceil(totalItems / itemsPerPage);
+
   const getPageNumbers = () => {
     const pages = [];
-    const totalVisible = 5;
     const leftSide = 2;
     const rightSide = 2;
 
-    if (totalPages <= totalVisible + leftSide + rightSide) {
+    if (totalPages <= 7) {
       for (let i = 1; i <= totalPages; i++) pages.push(i);
     } else {
       for (let i = 1; i <= leftSide; i++) pages.push(i);
@@ -40,15 +47,21 @@ const Pagination = ({ currentPage, ITEMS_PER_PAGE, filteredOrders, totalPages, h
     return pages;
   };
 
-
   return (
     <div className="pagination-container">
       <div className="pagination-info">
-        Showing <span className="font-medium">{(currentPage - 1) * ITEMS_PER_PAGE + 1}</span> to{' '}
-        <span className="font-medium">{Math.min(currentPage * ITEMS_PER_PAGE, filteredOrders.length)}</span> of{' '}
-        <span className="font-medium">{filteredOrders.length}</span> orders
+        Showing{' '}
+        <span className="pagination-highlight">
+          {(currentPage - 1) * itemsPerPage + 1}
+        </span>{' '}
+        to{' '}
+        <span className="pagination-highlight">
+          {Math.min(currentPage * itemsPerPage, totalItems)}
+        </span>{' '}
+        of <span className="pagination-highlight">{totalItems}</span> items
       </div>
-      <div className="pagination-controls">
+
+      <div className="pagination-buttons">
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
@@ -57,19 +70,25 @@ const Pagination = ({ currentPage, ITEMS_PER_PAGE, filteredOrders, totalPages, h
         >
           &#8592;
         </button>
+
         {getPageNumbers().map((page, index) =>
           page === '...' ? (
-            <span key={`ellipsis-${index}`} className="pagination-ellipsis">...</span>
+            <span key={`ellipsis-${index}`} className="pagination-ellipsis">
+              ...
+            </span>
           ) : (
             <button
-              key={`page-${page}`}
+              key={page}
               onClick={() => handlePageChange(page)}
-              className={`pagination-page-button ${currentPage === page ? 'active' : ''}`}
+              className={`pagination-button ${
+                currentPage === page ? 'pagination-active' : 'pagination-hover'
+              }`}
             >
               {page}
             </button>
           )
         )}
+
         <button
           onClick={() => handlePageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
@@ -81,6 +100,13 @@ const Pagination = ({ currentPage, ITEMS_PER_PAGE, filteredOrders, totalPages, h
       </div>
     </div>
   );
+};
+
+Pagination.propTypes = {
+  currentPage: PropTypes.number.isRequired,
+  itemsPerPage: PropTypes.number.isRequired,
+  totalItems: PropTypes.number.isRequired,
+  handlePageChange: PropTypes.func.isRequired,
 };
 
 export default Pagination;

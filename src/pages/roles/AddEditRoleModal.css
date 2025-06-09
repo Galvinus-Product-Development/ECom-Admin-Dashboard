@@ -1,158 +1,190 @@
+/* AddEditRoleModal.css */
+
+/* Overlay styling */
 .role-modal-overlay {
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal box styling */
+.role-modal-box {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  width: 90%;
+  max-width: 700px;
+  max-height: 90vh;
+  overflow-y: auto;
+  padding: 24px;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
   }
-  
-  .role-modal-container {
-    background-color: white;
-    border-radius: 8px;
-    padding: 24px;
-    width: 100%;
-    max-width: 32rem;
-    max-height: 90vh;
-    overflow-y: auto;
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  .role-modal-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 16px;
-  }
-  
-  .role-modal-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-  }
-  
-  .role-modal-close-btn {
-    padding: 4px;
-    border-radius: 4px;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  
-  .role-modal-close-btn:hover {
-    background: rgba(0, 0, 0, 0.1);
-  }
-  
-  .role-modal-form {
-    display: flex;
-    flex-direction: column;
-    gap: 24px;
-  }
-  
-  .role-modal-label {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #4b5563;
-  }
-  
-  .role-modal-input,
-  .role-modal-textarea {
-    width: 100%;
-    padding: 8px;
-    border-radius: 0.375rem;
-    border: 1px solid #d1d5db;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  
-  .role-modal-input:focus,
-  .role-modal-textarea:focus {
-    border-color: #3b82f6;
-    box-shadow: 0 0 0 1px #3b82f6;
-  }
-  
-  .role-modal-permissions {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .role-modal-permission-group {
-    border: 1px solid #e5e7eb;
-    border-radius: 8px;
+}
+
+/* Modal header */
+.role-modal-header {
+  margin: 0 0 20px 0;
+  color: #2d3748;
+  font-size: 1.5rem;
+  font-weight: 600;
+  border-bottom: 1px solid #e2e8f0;
+  padding-bottom: 12px;
+}
+
+/* Form styling */
+.role-modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.role-modal-form label {
+  font-weight: 500;
+  color: #4a5568;
+  margin-bottom: 4px;
+  display: block;
+}
+
+.role-modal-form input[type="text"],
+.role-modal-form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+
+.role-modal-form input[type="text"]:focus,
+.role-modal-form textarea:focus {
+  outline: none;
+  border-color: #4299e1;
+  box-shadow: 0 0 0 3px rgba(66, 153, 225, 0.2);
+}
+
+.role-modal-form textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Permissions table */
+.permission-table-container {
+  overflow-x: auto;
+  margin: 8px 0 16px;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+}
+
+.permission-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.permission-table th,
+.permission-table td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid #edf2f7;
+}
+
+.permission-table th {
+  background-color: #f7fafc;
+  color: #4a5568;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+}
+
+.permission-table tr:last-child td {
+  border-bottom: none;
+}
+
+.permission-table tr:hover {
+  background-color: #f8fafc;
+}
+
+.permission-table input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  accent-color: #4299e1;
+}
+
+/* Buttons */
+.role-modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.btn-save {
+  background-color: #4299e1;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn-save:hover {
+  background-color: #3182ce;
+}
+
+.btn-cancel {
+  background-color: white;
+  color: #4a5568;
+  border: 1px solid #e2e8f0;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-cancel:hover {
+  background-color: #f7fafc;
+  border-color: #cbd5e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .role-modal-box {
+    width: 95%;
     padding: 16px;
   }
   
-  .role-modal-permission-title {
-    font-size: 1rem;
-    font-weight: 600;
-    color: #111827;
+  .permission-table th,
+  .permission-table td {
+    padding: 8px 12px;
   }
   
-  .role-modal-permission-item {
-    display: flex;
-    align-items: flex-start;
+  .role-modal-buttons {
+    flex-direction: column-reverse;
   }
   
-  .role-modal-permission-checkbox {
-    margin-top: 4px;
-    border-radius: 4px;
+  .btn-save,
+  .btn-cancel {
+    width: 100%;
   }
-  
-  .role-modal-permission-label {
-    margin-left: 12px;
-  }
-  
-  .role-modal-permission-name {
-    font-size: 0.875rem;
-    font-weight: 500;
-    color: #4b5563;
-  }
-  
-  .role-modal-permission-description {
-    font-size: 0.875rem;
-    color: #6b7280;
-  }
-  
-  .role-modal-permission-actions {
-    display: flex;
-    gap: 8px;
-    margin-top: 8px;
-  }
-  
-  .role-modal-footer {
-    display: flex;
-    justify-content: flex-end;
-    gap: 12px;
-  }
-  
-  .role-modal-cancel-btn,
-  .role-modal-submit-btn {
-    padding: 8px 16px;
-    border-radius: 0.375rem;
-    font-size: 1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
-  }
-  
-  .role-modal-cancel-btn {
-    background-color: #f3f4f6;
-    border: 1px solid #d1d5db;
-    color: #4b5563;
-  }
-  
-  .role-modal-cancel-btn:hover {
-    background-color: #e5e7eb;
-  }
-  
-  .role-modal-submit-btn {
-    background-color: #2563eb;
-    color: white;
-    border: none;
-  }
-  
-  .role-modal-submit-btn:hover {
-    background-color: #1d4ed8;
-  }
-  
+}

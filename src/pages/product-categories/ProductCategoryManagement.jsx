@@ -6,9 +6,10 @@ import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import api from "../../services/api";
 import EditCategory from './EditCategory';
-//import NewCategory from './NewCategory';
+import Pagination from './Pagination';
 import ProductCategoriesTable from './ProductCategoriesTable';
 import './ProductCategoryManagement.css';
+import TopBar from './TopBar';
 
 const ProductCategoryManagement = () => {
   const navigate = useNavigate();
@@ -20,11 +21,11 @@ const ProductCategoryManagement = () => {
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
-  const [categoriesPerPage] = useState(10);
+  const categoriesPerPage = 10;
 
   // Search and Sort state
   const [searchTerm, setSearchTerm] = useState('');
-  const [sortOption, setSortOption] = useState('name'); // default sort by name
+  const [sortOption, setSortOption] = useState('name-asc'); // default sort by name
 
 
   useEffect(() => {
@@ -35,17 +36,6 @@ const fetchCategories = async () => {
     setLoading(true);
     try {
         const response = await api.get("/product-categories");
-        // Create a map for quick lookup of parent categories
-    /*    const categoryMap = response.data.reduce((map, category) => {
-            map[category.product_category_id] = category;
-            return map;
-        }, {});
-
-        // Enrich categories by adding parent category details
-        const enrichedCategories = response.data.map(category => ({
-            ...category,
-            parent_category: categoryMap[category.parent_category_id] || null // Fetch parent details if available
-        })); */
         setCategories(response.data);
     } catch (error) {
         console.error("Error fetching categories:", error);
@@ -62,28 +52,10 @@ const handleCloseEdit = () => {
     setSelectedCategoryId(null);
 };
 
-/*const handleAddCategory = async (categoryData) => {
-    try {
-        const response = await api.post("/product-categories", categoryData);
-        setCategories([...categories, response.data]);
-        toast.success("Category added successfully");
-    } catch (error) {
-        console.error("Error adding category:", error);
-        toast.error("Failed to add category");
-    }
-};
-
- /**
-     * This is called after successful update in EditCategory component.
-     * @param {object} updatedCategory
-     */
 const handleUpdateCategory = async (updatedCategory) => {
     try {
-        //const response = await api.put(`/product-categories/${id}`, updatedData);
+        
         await fetchCategories();
-       /* setCategories(categories.map((cat) => 
-            cat.product_category_id === updatedCategory.product_category_id ? updatedCategory : cat
-        ));*/
         toast.success("Category updated successfully");
         handleCloseEdit();
     } catch (error) {
@@ -111,47 +83,47 @@ const handleOpenNewCategory = () => {
 };
 
 const handleSearchChange = (e) => setSearchTerm(e.target.value);
-const handleSortChange = (e) => setSortOption(e.target.value);
+    const handleSortChange = (e) => setSortOption(e.target.value);
+    const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
 // Filter and sort categories
-const filteredCategories = categories.filter(cat =>
+const filteredCategories = categories
+  .filter(cat =>
     cat.category_name.toLowerCase().includes(searchTerm.toLowerCase())
-).sort((a, b) => {
-    if (sortOption === 'name') {
-        return a.category_name.localeCompare(b.category_name);
-    } else if (sortOption === 'status') {
-        return a.status.localeCompare(b.status);
+  )
+  .sort((a, b) => {
+    if (sortOption === 'name-asc') {
+      return a.category_name.trim().toLowerCase().localeCompare(b.category_name.trim().toLowerCase());
+    }
+    else if (sortOption === 'name-desc') {
+        return b.category_name.trim().toLowerCase().localeCompare(a.category_name.trim().toLowerCase());
+      } else if (sortOption === 'status') {
+      return a.status.trim().toLowerCase().localeCompare(b.status.trim().toLowerCase());
     }
     return 0;
-});
+  });
+
 
 // Pagination logic
 const indexOfLastCategory = currentPage * categoriesPerPage;
 const indexOfFirstCategory = indexOfLastCategory - categoriesPerPage;
 const currentCategories = filteredCategories.slice(indexOfFirstCategory, indexOfLastCategory);
 
-const paginate = (pageNumber) => setCurrentPage(pageNumber);
+
 
   return (
-    <div className="product-category-management">
-      <h2>Product Category Management</h2>
+    <div className="product-category-management-container">
+      <h1>Product Category Management</h1>
 
        {/* Top Section: Search, Sort, New Category Button */}
-       <div className="top-bar">
-                <input
-                    type="text"
-                    placeholder="Search categories..."
-                    value={searchTerm}
-                    onChange={handleSearchChange}
-                />
+                <TopBar
+            searchTerm={searchTerm}
+            onSearchChange={handleSearchChange}
+            sortOption={sortOption}
+            onSortChange={handleSortChange}
+            onNewCategory={handleOpenNewCategory}
+            />
 
-                <select value={sortOption} onChange={handleSortChange}>
-                    <option value="name">Sort by Name</option>
-                    <option value="status">Sort by Status</option>
-                </select>
-
-                <button onClick={handleOpenNewCategory}>+ New Category</button>
-            </div>
             
          { /*  <NewCategory 
                 onAddCategory={handleAddCategory} 
@@ -166,17 +138,13 @@ const paginate = (pageNumber) => setCurrentPage(pageNumber);
             />
 
             {/* Pagination */}
-            <div className="pagination-container">
-                {Array.from({ length: Math.ceil(filteredCategories.length / categoriesPerPage) }).map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => paginate(index + 1)}
-                        className={currentPage === index + 1 ? 'active' : ''}
-                    >
-                        {index + 1}
-                    </button>
-                ))}
-            </div>
+            <Pagination
+                currentPage={currentPage}
+                itemsPerPage={categoriesPerPage}
+                totalItems={filteredCategories.length}
+                handlePageChange={paginate}
+                />
+
 
             {selectedCategoryId && (
                   <div className="modal-overlay">

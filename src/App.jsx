@@ -1,4 +1,3 @@
-import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify"; // Import ToastContainer
@@ -19,8 +18,8 @@ import NewCategory from "./pages/product-categories/NewCategory";
 import ProductCategoryManagement from "./pages/product-categories/ProductCategoryManagement";
 import AddVariant from './pages/products/AddVariant';
 import EditProduct from "./pages/products/EditProduct";
-import NewProduct from "./pages/products/NewProduct";
 import ProductDetails from "./pages/products/ProductDetails";
+import ProductForm from "./pages/products/ProductForm";
 import ProductManagement from "./pages/products/ProductManagement";
 import RolesManagement from "./pages/roles/RolesManagement";
 import SizeManagement from "./pages/sizes/SizeManagement";
@@ -45,7 +44,7 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path="/users" element={<UserManagement />} />
               <Route path="/products" element={<ProductManagement />} />
-              <Route path="/products/new-product" element={<NewProduct />} />
+              <Route path="/products/new-product" element={<ProductForm />} />
               <Route path="/products/add-variant/:productId" element={<AddVariant />} /> 
               <Route path="/products/:productId" element={<ProductDetails />} />
               <Route path="/products/edit/:productId" element={<EditProduct />} />
