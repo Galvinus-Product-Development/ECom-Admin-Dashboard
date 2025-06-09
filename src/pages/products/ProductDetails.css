@@ -1,7 +1,7 @@
 /* ProductDetailView.css */
 
 .product-detail-container {
-  margin-left: 18rem; /* Align with sidebar */
+ 
   margin-top: 4rem;
     padding: 2rem;
     min-height: calc(100vh - 4rem); /* Full height minus header */
