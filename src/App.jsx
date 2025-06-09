@@ -1,4 +1,3 @@
-import React from "react";
 import { Provider } from "react-redux";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify"; // Import ToastContainer
@@ -6,31 +5,30 @@ import "react-toastify/dist/ReactToastify.css";
 import { AuthProvider } from "../src/contexts/AuthContexts";
 import Layout from "./components/Layout/Layout";
 import AnalyticsManagement from "./pages/Analytics/AnalyticsManagement";
+import Attributes from "./pages/attributes/Attributes";
 import LoginPage from "./pages/auth/LoginPage";
 import BrandManagement from "./pages/brands/BrandManagement";
-import NewBrand from "./pages/brands/NewBrand";
 import ColourManagement from "./pages/colours/ColourManagement";
+import AddCoupon from "./pages/Coupons&Discounts/AddCoupon";
+import CouponAndDiscount from "./pages/Coupons&Discounts/CouponAndDiscount";
+import CustomerSupport from "./pages/CustomerSupport/CustomerSupport";
 import Dashboard from "./pages/Dashboard/Dashboard";
 import InventoryManagement from "./pages/inventory/InventoryManagement";
 import NotificationManagement from "./pages/notifications/NotificationManagement";
 import OrderManagement from "./pages/orders/OrderManagement";
 import PaymentManagement from "./pages/Payment/PaymentManagement";
+import PaymentSetting from "./pages/Payment_Setting/PaymentSetting";
 import NewCategory from "./pages/product-categories/NewCategory";
 import ProductCategoryManagement from "./pages/product-categories/ProductCategoryManagement";
 import AddVariant from "./pages/products/AddVariant";
 import EditProduct from "./pages/products/EditProduct";
-import NewProduct from "./pages/products/NewProduct";
 import ProductDetails from "./pages/products/ProductDetails";
+import ProductForm from "./pages/products/ProductForm";
 import ProductManagement from "./pages/products/ProductManagement";
 import RolesManagement from "./pages/roles/RolesManagement";
 import SizeManagement from "./pages/sizes/SizeManagement";
 import UserManagement from "./pages/users/UserManagement";
 import store from "./redux/store";
-import Attributes from "./pages/attributes/Attributes";
-import PaymentSetting from "./pages/Payment_Setting/PaymentSetting";
-import CouponAndDiscount from "./pages/Coupons&Discounts/CouponAndDiscount";
-import AddCoupon from "./pages/Coupons&Discounts/AddCoupon";
-import CustomerSupport from "./pages/CustomerSupport/CustomerSupport";
 
 function App() {
   return (
@@ -50,7 +48,7 @@ function App() {
               <Route index element={<Dashboard />} />
               <Route path="/users" element={<UserManagement />} />
               <Route path="/products" element={<ProductManagement />} />
-              <Route path="/products/new-product" element={<NewProduct />} />
+              <Route path="/products/new-product" element={<ProductForm />} />
               <Route
                 path="/products/add-variant/:productId"
                 element={<AddVariant />}

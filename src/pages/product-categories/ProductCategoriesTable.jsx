@@ -1,8 +1,6 @@
-//import { Categories } from 'lucide-react';
-import { useEffect, useState } from 'react';
-//import { useDispatch, useSelector } from 'react-redux';
 import PropTypes from "prop-types";
-//import { Link } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import { FiEdit, FiTrash2 } from 'react-icons/fi';
 import "react-toastify/dist/ReactToastify.css";
 import './ProductCategoriesTable.css';
 
@@ -11,10 +9,6 @@ const ProductCategoriesTable = ({ categories, onEdit, onDelete, loading }) => {
   const [sortDirection, setSortDirection] = useState('asc');  
 
   useEffect(() => {
-   /* const enrichedCategories = categories.map(category => ({
-        ...category,
-        parent_category: categories.find(cat => cat.product_category_id === category.parent_category_id) || null
-    })); */
     setSortedCategories(categories);
 }, [categories]); 
 
@@ -28,25 +22,14 @@ const handleSort = () => {
     setSortDirection(sortDirection === "asc" ? "desc" : "asc");
 }; 
 
-{/*const handleReorder = async (categoryId, newIndex) => {
-    try {
-        await api.put(`/product-categories/${categoryId}/reorder`, { newIndex });
-        toast.success("Category reordered successfully");
-    } catch (error) {
-        console.error("Error reordering category:", error);
-        toast.error("Failed to reorder category");
-    }
-}; */}
 
   return (  
     <div className="product-categories-table">  
       <div className="table-header">  
         <h2>  
-           Product Categories  
+           Product Categories Table 
         </h2>  
-   {/*     <Link to="/product-categories/new" className="btn">  
-          New Category  
-        </Link>  */}
+
       </div>  
 
       {loading ? (
@@ -67,20 +50,15 @@ const handleSort = () => {
                             <tr key={category.product_category_id}>
                                 <td>{category.category_name}</td>
                                 <td>{category.parent_category_name || "None"}</td>
-                             {/*    <td>
-                                    <button 
-                                        onClick={() => handleReorder(category.product_category_id, index - 1)}
-                                        disabled={index === 0}
-                                    >Up</button>
-                                    <button 
-                                        onClick={() => handleReorder(category.product_category_id, index + 1)}
-                                        disabled={index === sortedCategories.length - 1}
-                                    >Down</button>
-                                </td> */}
+                        
                                 <td>{category.status === "active" ? "Yes" : "No"}</td> 
                                 <td>
-                                    <button onClick={() => onEdit(category)}>Edit</button>
-                                    <button onClick={() => onDelete(category.product_category_id)}>Delete</button>
+                                    <button onClick={() => onEdit(category)} aria-label="Edit category">
+                                        <FiEdit />
+                                    </button>
+                                    <button onClick={() => onDelete(category.product_category_id)} aria-label="Delete category">
+                                        <FiTrash2 />
+                                    </button>
                                 </td>
                             </tr>
                         ))}

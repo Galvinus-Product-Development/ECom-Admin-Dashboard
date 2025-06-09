@@ -9,7 +9,7 @@ const AddVariant = () => {
     console.log("Product ID in AddVariant:", productId);
     const navigate = useNavigate();
     const [colours, setColours] = useState([]);
-    const [sizes, setSizes] = useState([]);
+    const [sizes, setSizes] = useState([]); 
     const [variantData, setVariantData] = useState({
         colour_id: "",
         size_id: "", 

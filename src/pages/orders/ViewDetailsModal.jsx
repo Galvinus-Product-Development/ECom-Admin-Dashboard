@@ -1,4 +1,3 @@
-import React from 'react';
 import { X } from 'lucide-react';
 import './ViewDetailsModal.css';
 
@@ -30,12 +29,12 @@ const ViewDetailsModal = ({ showOrderModal, selectedOrder, setShowOrderModal, se
               <p className="label">Order Date</p>
               <p className="value">{selectedOrder.createdAt.toLocaleString()}</p>
             </div>
-            <div>
+            {/* <div>
               <p className="label">Status</p>
               <span className={`status-badge ${getStatusBadgeColor(selectedOrder.status)}`}>
                 {selectedOrder.status.charAt(0).toUpperCase() + selectedOrder.status.slice(1)}
               </span>
-            </div>
+            </div> */}
             <div>
               <p className="label">Total Amount</p>
               <p className="value">${selectedOrder.totalAmount.toFixed(2)}</p>
@@ -49,6 +48,9 @@ const ViewDetailsModal = ({ showOrderModal, selectedOrder, setShowOrderModal, se
                   <div>
                     <p className="order-item-id">Product ID: {product.productId}</p>
                     <p className="order-item-quantity">Quantity: {product.quantity}</p>
+                    <span className={`status-badge ${getStatusBadgeColor(product.status)}`}>
+        {product.status.charAt(0).toUpperCase() + product.status.slice(1)}
+      </span>
                   </div>
                   <p className="order-item-price">${product.price.toFixed(2)}</p>
                 </div>

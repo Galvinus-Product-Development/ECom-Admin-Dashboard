@@ -1,0 +1,135 @@
+
+.role-view-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+  
+  .role-view-modal-content {
+    background-color: #f9f9fc;
+    border-radius: 12px;
+    border: 1.5px solid #ccc;
+    padding: 1.5rem;
+    width: 90%;
+    max-width: 700px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    position: relative;
+  }
+  
+  .role-view-close-button {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #333;
+    transition: color 0.2s ease;
+  }
+  
+  .role-view-close-button:hover {
+    color: #d32f2f;
+  }
+  .role-view-container {
+    background-color: #f9f9fc;
+    border-radius: 12px;
+    border: 1.5px solid #ccc;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    max-width: 700px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .role-view-header {
+    text-align: center;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #5146d8;
+    margin-bottom: 1.25rem;
+  }
+  
+  .role-description-label,
+  .role-users-label,
+  .role-modules-label {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 0.3rem;
+    display: block;
+  }
+  
+  .role-description-box {
+    background: #fff;
+    border: 1.5px solid #999;
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    color: #444;
+    font-size: 0.95rem;
+  }
+  
+  .role-users {
+    margin-bottom: 1.5rem;
+    font-size: 0.95rem;
+    color: #444;
+  }
+  
+  .permissions-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 0.5rem;
+  }
+  
+  .permissions-table th,
+  .permissions-table td {
+    border: 1px solid #aaa;
+    padding: 10px;
+    font-size: 0.9rem;
+    text-align: left;
+    color: #333;
+  }
+  
+  .permissions-table th {
+    background-color: #ececff;
+    color: #333;
+  }
+  
+  @media (max-width: 768px) {
+    .role-view-container {
+      padding: 1rem;
+      max-width: 100%;
+    }
+  
+    .role-view-header {
+      font-size: 1.1rem;
+    }
+  
+    .permissions-table th,
+    .permissions-table td {
+      font-size: 0.85rem;
+      padding: 8px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .role-view-container {
+      padding: 0.8rem;
+    }
+  
+    .role-description-box {
+      padding: 0.5rem 0.75rem;
+    }
+  
+    .permissions-table th,
+    .permissions-table td {
+      font-size: 0.78rem;
+      padding: 6px;
+    }
+  }
+  

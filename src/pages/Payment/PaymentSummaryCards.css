@@ -1,24 +1,82 @@
-/* PaymentSummaryCards.css */
+/* Base Grid */
 .grid {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
 }
 
-.md\:grid-cols-4 {
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .mb-6 {
   margin-bottom: 1.5rem;
 }
 
+/* Desktop - 1024px and above */
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Tablet - 768px to 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Small Tablet/Phablet - 576px to 767px */
+@media (min-width: 576px) and (max-width: 767px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .card-header .title {
+    font-size: 0.95rem;
+  }
+
+  .card-header .value {
+    font-size: 1.15rem;
+  }
+
+  .card-header .icon {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
+
+/* Mobile - Up to 575px */
+@media (max-width: 575px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .card-header .title {
+    font-size: 0.9rem;
+  }
+
+  .card-header .value {
+    font-size: 1.1rem;
+  }
+
+  .card-header .icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+}
+
+/* Card Style */
 .card {
   background-color: #fff;
   border-radius: 0.5rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Header Flex */
 .card-header {
   padding: 1rem;
   display: flex;
@@ -26,6 +84,7 @@
   align-items: center;
 }
 
+/* Typography */
 .card-header .title {
   font-size: 1rem;
   font-weight: bold;
@@ -38,14 +97,15 @@
   color: #000;
 }
 
+/* Icons */
 .card-header .icon {
   width: 2rem;
   height: 2rem;
 }
 
-/* Total Revenue */
+/* Card Colors */
 .card-total-revenue {
-  border-left: 4px solid #34d399; /* Green */
+  border-left: 4px solid #34d399;
 }
 
 .card-total-revenue .card-header {
@@ -53,12 +113,11 @@
 }
 
 .card-total-revenue .icon {
-  color: #34d399; /* Green */
+  color: #34d399;
 }
 
-/* Pending Payments */
 .card-pending-payments {
-  border-left: 4px solid #f59e0b; /* Yellow */
+  border-left: 4px solid #f59e0b;
 }
 
 .card-pending-payments .card-header {
@@ -66,12 +125,11 @@
 }
 
 .card-pending-payments .icon {
-  color: #f59e0b; /* Yellow */
+  color: #f59e0b;
 }
 
-/* Total Refunds */
 .card-total-refunds {
-  border-left: 4px solid #f87171; /* Red */
+  border-left: 4px solid #f87171;
 }
 
 .card-total-refunds .card-header {
@@ -79,12 +137,11 @@
 }
 
 .card-total-refunds .icon {
-  color: #f87171; /* Red */
+  color: #f87171;
 }
 
-/* Success Rate */
 .card-success-rate {
-  border-left: 4px solid #3b82f6; /* Blue */
+  border-left: 4px solid #3b82f6;
 }
 
 .card-success-rate .card-header {
@@ -92,5 +149,5 @@
 }
 
 .card-success-rate .icon {
-  color: #3b82f6; /* Blue */
+  color: #3b82f6;
 }

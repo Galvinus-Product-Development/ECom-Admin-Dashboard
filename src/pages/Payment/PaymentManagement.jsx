@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import PaymentSummaryCards from "./PaymentSummaryCards";
+import { CreditCard, DollarSign, Receipt } from "lucide-react";
+import { useState } from "react";
 import FiltersAndSearch from "./FiltersAndSearch";
-import PaymentsTable from "./PaymentsTable";
 import Pagination from "./Pagination";
 import PaymentDetailsModal from "./PaymentDetailsModal";
-import RefundModal from "./RefundModal";
-import { CreditCard, Receipt, DollarSign } from "lucide-react";
 import "./PaymentManagement.css";
+import PaymentsTable from "./PaymentsTable";
+import PaymentSummaryCards from "./PaymentSummaryCards";
+import RefundModal from "./RefundModal";
 
 const generateMockPayments = (count) => {
   return Array.from({ length: count }, (_, index) => ({
@@ -26,7 +26,9 @@ const generateMockPayments = (count) => {
   }));
 };
 
-const mockPayments = generateMockPayments(50);
+const mockPayments = generateMockPayments(200);
+console.log("Generated mockPayments count:", mockPayments.length);
+
 const ITEMS_PER_PAGE = 5;
 
 const PaymentManagement = () => {
@@ -42,6 +44,8 @@ const PaymentManagement = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [refundAmount, setRefundAmount] = useState(0);
   const [refundReason, setRefundReason] = useState("");
+  console.log("Payments state count:", payments.length);
+
 
   const getFilteredAndSortedPayments = () => {
     let filtered = payments.filter((payment) => {
@@ -100,11 +104,17 @@ const PaymentManagement = () => {
   };
 
   const filteredPayments = getFilteredAndSortedPayments();
+  console.log("Filtered Payments count:", filteredPayments.length);
+
   const totalPages = Math.ceil(filteredPayments.length / ITEMS_PER_PAGE);
+  console.log("Total pages:", totalPages);
+
   const paginatedPayments = filteredPayments.slice(
     (currentPage - 1) * ITEMS_PER_PAGE,
     currentPage * ITEMS_PER_PAGE
   );
+  console.log("Paginated Payments (this page):", paginatedPayments.length);
+
 
   const handlePageChange = (page) => {
     setCurrentPage(page);

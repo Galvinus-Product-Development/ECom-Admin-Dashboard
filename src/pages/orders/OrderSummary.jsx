@@ -1,6 +1,5 @@
-import React from "react";
-import SummaryCard from "./SummaryCard";
 import "./OrderSummary.css"; // Importing the CSS file
+import SummaryCard from "./SummaryCard";
 
 const OrderSummary = ({ orders }) => {
   const totalRevenue = orders
@@ -10,21 +9,26 @@ const OrderSummary = ({ orders }) => {
 
   return (
     <div className="order-summary-container">
-      <SummaryCard title="Total Orders" value={orders.length} color="text-primary" />
+      <SummaryCard title="Total Orders" value={orders.length} color="summary-default" />
       <SummaryCard
-        title="Pending Orders"
+        title="Item Orders"
         value={orders.filter((order) => order.status === "pending").length}
-        color="text-warning"
+        color="summary-ocean"
       />
       <SummaryCard
-        title="Total Revenue"
+        title="Return Orders"
         value={`$${totalRevenue}`}
-        color="text-success"
+        color="summary-red"
       />
       <SummaryCard
-        title="Average Order Value"
+        title="Orders Fulfilled"
         value={`$${averageOrderValue}`}
-        color="text-info"
+        color="summary-blue"
+      />
+      <SummaryCard
+        title="Orders Delivered"
+        value={`$${averageOrderValue}`}
+        color="summary-green"
       />
     </div>
   );

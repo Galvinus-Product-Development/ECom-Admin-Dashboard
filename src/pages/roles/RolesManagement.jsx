@@ -1,51 +1,70 @@
 // RolesManagement.jsx
-import React, { useState } from "react";
-import { Plus, Edit, Trash2, CheckCircle } from "lucide-react";
-import SummaryCards from "./SummaryCards";
-import FiltersAndActions from "./FiltersAndActions";
-import RolesGrid from "./RolesGrid";
+import { CheckCircle, Edit, Plus, Trash2 } from "lucide-react";
+import { useState } from "react";
 import AddEditRoleModal from "./AddEditRoleModal";
 import DeleteRoleModal from "./DeleteRoleModal";
+import FiltersAndActions from "./FiltersAndActions";
+import RolesGrid from "./RolesGrid";
 import "./RolesManagement.css";
+import RoleView from "./RoleView";
+import SummaryCards from "./SummaryCards";
 
+// const mockPermissions = [
+//   {
+//     id: "perm-1",
+//     name: "Manage Users",
+//     description: "Full access to user management",
+//     module: "Users",
+//     actions: ["create", "read", "update", "delete"],
+//   },
+//   {
+//     id: "perm-2",
+//     name: "View Products",
+//     description: "Read-only access to products",
+//     module: "Products",
+//     actions: ["read"],
+//   },
+//   {
+//     id: "perm-3",
+//     name: "Manage Orders",
+//     description: "Process and manage orders",
+//     module: "Orders",
+//     actions: ["read", "update"],
+//   },
+//   {
+//     id: "perm-4",
+//     name: "Manage Inventory",
+//     description: "Full access to inventory management",
+//     module: "Inventory",
+//     actions: ["create", "read", "update", "delete"],
+//   },
+//   {
+//     id: "perm-5",
+//     name: "View Analytics",
+//     description: "Access to analytics dashboard",
+//     module: "Analytics",
+//     actions: ["read"],
+//   },
+// ];
 const mockPermissions = [
-  {
-    id: "perm-1",
-    name: "Manage Users",
-    description: "Full access to user management",
-    module: "Users",
-    actions: ["create", "read", "update", "delete"],
-  },
-  {
-    id: "perm-2",
-    name: "View Products",
-    description: "Read-only access to products",
-    module: "Products",
-    actions: ["read"],
-  },
-  {
-    id: "perm-3",
-    name: "Manage Orders",
-    description: "Process and manage orders",
-    module: "Orders",
-    actions: ["read", "update"],
-  },
-  {
-    id: "perm-4",
-    name: "Manage Inventory",
-    description: "Full access to inventory management",
-    module: "Inventory",
-    actions: ["create", "read", "update", "delete"],
-  },
-  {
-    id: "perm-5",
-    name: "View Analytics",
-    description: "Access to analytics dashboard",
-    module: "Analytics",
-    actions: ["read"],
-  },
+  { id: 'products-create', module: 'Products', action: 'Create' },
+  { id: 'products-read', module: 'Products', action: 'Read' },
+  { id: 'products-update', module: 'Products', action: 'Update' },
+  { id: 'products-delete', module: 'Products', action: 'Delete' },
+  { id: 'orders-create', module: 'Orders', action: 'Create' },
+  { id: 'orders-read', module: 'Orders', action: 'Read' },
+  { id: 'orders-update', module: 'Orders', action: 'Update' },
+  { id: 'orders-delete', module: 'Orders', action: 'Delete' },
+  { id: 'inventory-create', module: 'Inventory', action: 'Create' },
+  { id: 'inventory-read', module: 'Inventory', action: 'Read' },
+  { id: 'inventory-update', module: 'Inventory', action: 'Update' },
+  { id: 'inventory-delete', module: 'Inventory', action: 'Delete' },
+  { id: 'analytics-read', module: 'Analytics', action: 'Read' },
+  { id: 'user-create', module: 'User', action: 'Create' },
+  { id: 'user-read', module: 'User', action: 'Read' },
+  { id: 'user-update', module: 'User', action: 'Update' },
+  { id: 'user-delete', module: 'User', action: 'Delete' },
 ];
-
 const mockRoles = [
   {
     id: "role-1",
@@ -78,12 +97,14 @@ const mockRoles = [
   },
 ];
 
+
 const RolesManagement = () => {
   const [roles,setRoles] = useState(mockRoles);
   const [selectedRole, setSelectedRole] = useState(null);
   const [showRoleModal, setShowRoleModal] = useState(false);
   const [search, setSearch] = useState("");
   const [selectedModule, setSelectedModule] = useState("all");
+  const [showRoleView, setShowRoleView] = useState(false);
 
   const [showDeleteModal, setShowDeleteModal] = useState(false);
   // New Role Form State
@@ -93,6 +114,8 @@ const RolesManagement = () => {
     permissions: [],
     users: 0,
   });
+  const modules = ['Products', 'Orders', 'Inventory', 'Analytics', 'User'];
+
 
   const handleAddRole = (e) => {
     e.preventDefault();
@@ -130,7 +153,7 @@ const RolesManagement = () => {
     });
   };
 
-  const modules = Array.from(new Set(mockPermissions.map((p) => p.module)));
+  // const modules = Array.from(new Set(mockPermissions.map((p) => p.module)));
 
   const filteredRoles = roles.filter((role) => {
     const matchesSearch =
@@ -168,10 +191,8 @@ const RolesManagement = () => {
     <div className="roles-management-container">
       <div className="header-container">
         <h1 className="header-title">Roles & Access Management</h1>
-        <p className="header-description">Manage user roles and permissions</p>
+        {/* <p className="header-description">Manage user roles and permissions</p> */}
       </div>
-
-      <SummaryCards roles={roles} mockPermissions={mockPermissions} />
 
       <FiltersAndActions
         modules={modules}
@@ -183,12 +204,18 @@ const RolesManagement = () => {
         setShowRoleModal={setShowRoleModal}
       />
 
+      <SummaryCards roles={roles} mockPermissions={mockPermissions} />
+
+    
+
       <RolesGrid
         filteredRoles={filteredRoles}
         setSelectedRole={setSelectedRole}
         setShowRoleModal={setShowRoleModal}
         setShowDeleteModal={setShowDeleteModal}
+        setShowRoleView={setShowRoleView}
         getPermissionIcon={getPermissionIcon}
+        mockPermissions={mockPermissions}
       />
 
       <AddEditRoleModal
@@ -210,6 +237,11 @@ const RolesManagement = () => {
         setSelectedRole={setSelectedRole}
         handleDeleteRole={handleDeleteRole}
       />
+      {showRoleView && selectedRole && (
+        <RoleView selectedRole={selectedRole}
+        setShowRoleView={setShowRoleView}/>
+)}
+
     </div>
   );
 };

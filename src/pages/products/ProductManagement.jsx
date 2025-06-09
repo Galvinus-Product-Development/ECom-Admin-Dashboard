@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./ProductManagement.css";
 import ProductTable from "./ProductTable";
@@ -9,7 +9,7 @@ const ProductManagement = () => {
 
   return (
     <div className="product-management-container">
-      <h1>Product Management</h1>
+      <h1>Product Management</h1> 
       <input
         type="text"
         className="product-search"

@@ -1,0 +1,76 @@
+/* TopBar.css */
+.top-bar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 10px 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .top-bar input[type="text"] {
+    flex: 1 1 250px;
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+  }
+  
+  .top-bar input[type="text"]:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  }
+  
+  .top-bar select {
+    padding: 8px 12px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: white;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+  }
+  
+  .top-bar select:hover,
+  .top-bar select:focus {
+    border-color: #007BFF;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0,123,255,0.5);
+  }
+  
+  .top-bar button {
+    padding: 8px 16px;
+    font-size: 1rem;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap;
+  }
+  
+  .top-bar button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive: stack elements on small screens */
+  @media (max-width: 480px) {
+    .top-bar {
+      flex-direction: column;
+      gap: 10px;
+    }
+  
+    .top-bar input[type="text"],
+    .top-bar select,
+    .top-bar button {
+      width: 100%;
+      flex: none;
+    }
+  }
+  
