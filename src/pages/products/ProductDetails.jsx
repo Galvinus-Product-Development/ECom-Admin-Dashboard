@@ -1,206 +1,79 @@
 import { ArrowLeft, DollarSign, Edit3, Info, Package, Truck } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import { fetchProductById } from '../../services/api';
 import './ProductDetails.css';
-
-// Same mock data as in EditProduct component
-const mockProducts = {
-  'prod-001': {
-    id: 'prod-001',
-    name: 'Premium Wireless Headphones',
-    description: 'Noise-cancelling wireless headphones with 30-hour battery life',
-    category: 'electronics',
-    brand: 'SoundMaster',
-    type: 'Goods',
-    price: 299.99,
-    salePrice: 249.99,
-    isPublished: true,
-    sku: 'SM-WH-2023',
-    barcode: '123456789012',
-    stockStatus: 'In Stock',
-    trackInventory: true,
-    quantity: 50,
-    continueSellingWhenOutOfStock: false,
-    minStockLimit: 10,
-    belowLimit: 5,
-    isPhysicalProduct: true,
-    weight: 0.45,
-    dimensions: {
-      length: 20,
-      width: 15,
-      height: 8
-    },
-    images: [
-      {
-        id: 'img-1',
-        url: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=400&fit=crop',
-        name: 'headphones-front.jpg'
-      },
-      {
-        id: 'img-2',
-        url: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=400&h=400&fit=crop',
-        name: 'headphones-side.jpg'
-      }
-    ],
-    variants: [
-      {
-        id: 'var-1',
-        image: 'https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=300&h=300&fit=crop',
-        variantValue: 'Black',
-        salePrice: 249.99,
-        stock: 30,
-        isPublished: true
-      },
-      {
-        id: 'var-2',
-        image: 'https://images.unsplash.com/photo-1484704849700-f032a568e944?w=300&h=300&fit=crop',
-        variantValue: 'Silver',
-        salePrice: 259.99,
-        stock: 20,
-        isPublished: true
-      }
-    ]
-  },
-  'prod-002': {
-    id: 'prod-002',
-    name: 'Organic Cotton T-Shirt',
-    description: '100% organic cotton unisex t-shirt',
-    category: 'clothing',
-    brand: 'EcoWear',
-    type: 'Goods',
-    price: 29.99,
-    salePrice: 24.99,
-    isPublished: true,
-    sku: 'EW-TS-1001',
-    barcode: '987654321098',
-    stockStatus: 'In Stock',
-    trackInventory: true,
-    quantity: 100,
-    continueSellingWhenOutOfStock: true,
-    minStockLimit: 20,
-    belowLimit: 5,
-    isPhysicalProduct: true,
-    weight: 0.2,
-    dimensions: {
-      length: 30,
-      width: 20,
-      height: 2
-    },
-    images: [
-      {
-        id: 'img-3',
-        url: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop',
-        name: 'tshirt-front.jpg'
-      }
-    ],
-    variants: [
-      {
-        id: 'var-3',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop',
-        variantValue: 'White, S',
-        salePrice: 24.99,
-        stock: 25,
-        isPublished: true
-      },
-      {
-        id: 'var-4',
-        image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=300&h=300&fit=crop',
-        variantValue: 'White, M',
-        salePrice: 24.99,
-        stock: 30,
-        isPublished: true
-      }
-    ]
-  },
-  'prod-003': {
-    id: 'prod-003',
-    name: 'Smart Fitness Watch',
-    description: 'Water-resistant fitness tracker with heart rate monitor',
-    category: 'electronics',
-    brand: 'FitTech',
-    type: 'Goods',
-    price: 249.99,
-    salePrice: 199.99,
-    isPublished: false,
-    sku: 'FT-SW-2023',
-    barcode: '456789123456',
-    stockStatus: 'Low Stock',
-    trackInventory: true,
-    quantity: 25,
-    continueSellingWhenOutOfStock: false,
-    minStockLimit: 15,
-    belowLimit: 5,
-    isPhysicalProduct: true,
-    weight: 0.15,
-    dimensions: {
-      length: 10,
-      width: 8,
-      height: 2
-    },
-    images: [
-      {
-        id: 'img-4',
-        url: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop',
-        name: 'watch-front.jpg'
-      }
-    ],
-    variants: []
-  },
-  'prod-004': {
-    id: 'prod-004',
-    name: 'Yoga Mat Premium',
-    description: 'Non-slip yoga mat with alignment lines',
-    category: 'sports',
-    brand: 'ZenFit',
-    type: 'Goods',
-    price: 59.99,
-    salePrice: 49.99,
-    isPublished: true,
-    sku: 'ZF-YM-2023',
-    barcode: '789123456789',
-    stockStatus: 'In Stock',
-    trackInventory: true,
-    quantity: 75,
-    continueSellingWhenOutOfStock: true,
-    minStockLimit: 25,
-    belowLimit: 10,
-    isPhysicalProduct: true,
-    weight: 1.2,
-    dimensions: {
-      length: 180,
-      width: 60,
-      height: 0.5
-    },
-    images: [
-      {
-        id: 'img-5',
-        url: 'https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=400&fit=crop',
-        name: 'yoga-mat.jpg'
-      }
-    ],
-    variants: []
-  }
-};
 
 export default function ProductDetailView() {
   const { productId } = useParams();
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
   const [selectedImage, setSelectedImage] = useState(0);
 
+  const transformProductData = (apiResponse) => {
+    const productData = apiResponse.data;
+    return {
+      id: productData.product_id,
+      name: productData.product_name,
+      description: productData.description,
+      category: productData.ProductCategory?.category_name,
+      brand: productData.Brand?.brand_name,
+      type: productData.product_type,
+      price: parseFloat(productData.original_price),
+      salePrice: parseFloat(productData.sale_price),
+      isPublished: productData.is_published,
+      sku: productData.sku,
+      barcode: productData.barcode,
+      stockStatus: productData.stock_status,
+      quantity: productData.quantity,
+      minStockLimit: productData.minimum_stock_limit,
+      trackInventory: productData.track_inventory,
+      isPhysicalProduct: productData.is_physical_product,
+      weight: productData.weight,
+      dimensions: {
+        length: productData.length,
+        width: productData.breadth,
+        height: productData.height
+      },
+      images: productData.images?.map(img => ({
+        id: img.image_id,
+        url: img.image_url,
+        name: img.image_name,
+        isPrimary: img.is_primary
+      })) || [],
+      variants: productData.ProductItems?.map(variant => ({
+        id: variant.product_item_id,
+        image: variant.variantImages?.[0]?.image_url || '',
+        variantValue: `${variant.Colour?.colour_name || ''}${variant.Colour && variant.SizeOption ? ', ' : ''}${variant.SizeOption?.size_name || ''}`,
+        salePrice: parseFloat(variant.sale_price),
+        stock: variant.qty_in_stocks,
+        isPublished: true
+      })) || []
+    };
+  };
+
   useEffect(() => {
-    const loadProduct = () => {
+    const loadProduct = async () => {
       setLoading(true);
-      
-      // Simulate API call
-      setTimeout(() => {
-        const productData = mockProducts[productId];
-        if (productData) {
-          setProduct(productData);
+      setError(null);
+      try {
+        const response = await fetchProductById(productId);
+        console.log('API Response:', response);
+        
+        if (!response.success) {
+          throw new Error('Failed to fetch product data');
         }
+        
+        const transformedData = transformProductData(response);
+        setProduct(transformedData);
+      } catch (err) {
+        console.error('Error loading product:', err);
+        setError(err.message || 'Failed to load product');
+      } finally {
         setLoading(false);
-      }, 500);
+      }
     };
 
     if (productId) {
@@ -208,13 +81,8 @@ export default function ProductDetailView() {
     }
   }, [productId]);
 
-  const handleBack = () => {
-    navigate('/products');
-  };
-
-  const handleEdit = () => {
-    navigate(`/products/edit/${productId}`);
-  };
+  const handleBack = () => navigate('/products');
+  const handleEdit = () => navigate(`/products/${productId}/edit`);
 
   if (loading) {
     return (
@@ -227,12 +95,12 @@ export default function ProductDetailView() {
     );
   }
 
-  if (!product) {
+  if (error || !product) {
     return (
       <div className="product-detail-container">
         <div className="error-state">
           <h2>Product Not Found</h2>
-          <p>The product you're looking for doesn't exist.</p>
+          <p>{error || 'The product you&apos;re looking for doesn&apos;t exist.'}</p>
           <button onClick={handleBack} className="btn btn-primary">
             Back to Products
           </button>
@@ -287,11 +155,8 @@ export default function ProductDetailView() {
               ))}
             </div>
           )}
-
-          
         </div>
         
-
         {/* Right Side - Product Info */}
         <div className="product-info">
           {/* Basic Info */}
@@ -336,12 +201,12 @@ export default function ProductDetailView() {
               <div className="price-row">
                 <span className="price-label">Original Price:</span>
                 <span className={`price ${discount > 0 ? 'crossed' : ''}`}>
-                  ${product.price}
+                  ${product.price.toFixed(2)}
                 </span>
               </div>
               <div className="price-row">
                 <span className="price-label">Sale Price:</span>
-                <span className="price sale-price">${product.salePrice}</span>
+                <span className="price sale-price">${product.salePrice.toFixed(2)}</span>
               </div>
               {discount > 0 && (
                 <div className="discount-badge">
@@ -360,11 +225,11 @@ export default function ProductDetailView() {
             <div className="info-grid">
               <div className="info-item">
                 <label>SKU</label>
-                <span>{product.sku}</span>
+                <span>{product.sku || 'N/A'}</span>
               </div>
               <div className="info-item">
                 <label>Barcode</label>
-                <span>{product.barcode}</span>
+                <span>{product.barcode || 'N/A'}</span>
               </div>
               <div className="info-item">
                 <label>Stock Status</label>
@@ -374,11 +239,11 @@ export default function ProductDetailView() {
               </div>
               <div className="info-item">
                 <label>Quantity</label>
-                <span>{product.quantity} units</span>
+                <span>{product.quantity || 0} units</span>
               </div>
               <div className="info-item">
                 <label>Min Stock Limit</label>
-                <span>{product.minStockLimit} units</span>
+                <span>{product.minStockLimit || 'N/A'}</span>
               </div>
               <div className="info-item">
                 <label>Track Inventory</label>
@@ -397,180 +262,48 @@ export default function ProductDetailView() {
               <div className="info-grid">
                 <div className="info-item">
                   <label>Weight</label>
-                  <span>{product.weight} kg</span>
+                  <span>{product.weight || 'N/A'} kg</span>
                 </div>
                 <div className="info-item">
                   <label>Dimensions</label>
                   <span>
-                    {product.dimensions.length} × {product.dimensions.width} × {product.dimensions.height} cm
+                    {product.dimensions.length || 'N/A'} × {product.dimensions.width || 'N/A'} × {product.dimensions.height || 'N/A'} cm
                   </span>
                 </div>
               </div>
             </div>
           )}
-
-          {/* Variants */}
-          {/* {product.variants && product.variants.length > 0 && (
-            <div className="info-section">
-              <div className="info-header">
-                <Package size={20} />
-                <h2>Product Variants ({product.variants.length})</h2>
-              </div>
-              <div className="variants-grid">
-                {product.variants.map(variant => (
-                  <div key={variant.id} className="variant-card">
-                    <img 
-                      src={variant.image} 
-                      alt={variant.variantValue}
-                      className="variant-image"
-                    />
-                    <div className="variant-info">
-                      <span className="variant-name">{variant.variantValue}</span>
-                      <span className="variant-price">${variant.salePrice}</span>
-                      <span className="variant-stock">Stock: {variant.stock}</span>
-                      <span className={`variant-status ${variant.isPublished ? 'published' : 'draft'}`}>
-                        {variant.isPublished ? 'Published' : 'Draft'}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )} */}
-        </div>
-        <div>
-          
         </div>
       </div>
-      {/* Variants */}
-      {product.variants && product.variants.length > 0 && (
-            <div className="info-variant-section">
-              <div className="info-header">
-                <Package size={20} />
-                <h2>Product Variants ({product.variants.length})</h2>
+
+      {/* Variants Section */}
+      {product.variants.length > 0 && (
+        <div className="info-variant-section">
+          <div className="info-header">
+            <Package size={20} />
+            <h2>Product Variants ({product.variants.length})</h2>
+          </div>
+          <div className="variants-grid">
+            {product.variants.map(variant => (
+              <div key={variant.id} className="variant-card">
+                <img 
+                  src={variant.image || 'https://via.placeholder.com/150'} 
+                  alt={variant.variantValue}
+                  className="variant-image"
+                />
+                <div className="variant-info">
+                  <span className="variant-name">{variant.variantValue}</span>
+                  <span className="variant-price">${variant.salePrice.toFixed(2)}</span>
+                  <span className="variant-stock">Stock: {variant.stock}</span>
+                  <span className={`variant-status ${variant.isPublished ? 'published' : 'draft'}`}>
+                    {variant.isPublished ? 'Published' : 'Draft'}
+                  </span>
+                </div>
               </div>
-              <div className="variants-grid">
-                {product.variants.map(variant => (
-                  <div key={variant.id} className="variant-card">
-                    <img 
-                      src={variant.image} 
-                      alt={variant.variantValue}
-                      className="variant-image"
-                    />
-                    <div className="variant-info">
-                      <span className="variant-name">{variant.variantValue}</span>
-                      <span className="variant-price">${variant.salePrice}</span>
-                      <span className="variant-stock">Stock: {variant.stock}</span>
-                      <span className={`variant-status ${variant.isPublished ? 'published' : 'draft'}`}>
-                        {variant.isPublished ? 'Published' : 'Draft'}
-                      </span>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
+            ))}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
-/* import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
-import { fetchProductById } from "../../services/api";
-import "./ProductDetails.css";
-
-const ProductDetails = () => {
-  const navigate = useNavigate();
-  const { productId } = useParams();
-  const [product, setProduct] = useState(null);
-  const [productItems, setProductItems] = useState([]);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    loadProductDetails();
-  }, [productId]);
-
-
-  
-  const loadProductDetails = async () => {
-    try {
-      // Fetch product data
-      const response = await fetchProductById(productId);
-      const { data } = response;
-      setProduct(data?.data?.product || {});
-      setProductItems(data?.data?.productItems || []);
-      
-    } catch (error) {
-      console.error("Error fetching product details:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
-
-  if (loading) return <p>Loading product details...</p>;
-  if (!product || Object.keys(product).length === 0) return <p>Product not found or failed to load.</p>;
-
-  return (
-    <div className="product-details-container">
-        < div className="product-details-box">
-        <h1>PRODUCT DETAILS: </h1>
-      <h2>{product?.product_name || "Product Name Not Available"}</h2>
-      <p><strong>Description:</strong> {product?.product_description || "No Description Available"}</p>
-      <p><strong>Category:</strong> {product?.ProductCategory?.category_name || "N/A"}</p>
-      <p><strong>Brand:</strong> {product?.Brand?.brand_name || "N/A"}</p>
-      <p><strong>Status:</strong> {product?.status || "N/A"}</p>
-
-      <h3>Product Variants</h3>
-      
-        <table className="product-variants-table">
-          <thead>
-            <tr>
-            <th>Sr. No.</th>
-            <th>Variant ID</th>
-              <th>Color</th>
-              <th>Size</th>
-              <th>Original Price</th>
-              <th>Discount (%)</th>
-              <th>Sale Price</th>
-              <th>Stock</th>
-              <th>Images</th>
-            </tr>
-          </thead>
-          <tbody>
-            {productItems?.map((item, index) => (
-              <tr key={item.product_item_id}>
-                 <td>{index + 1}</td>
-                <td>{item.product_item_id}</td>
-                <td>{item.Colour?.colour_name || "N/A"}</td>
-                <td>{item.SizeOption?.size_name || "N/A"}</td>
-                <td>${item.original_price}</td>
-                <td>{item.discount_applicable}%</td>
-                <td>${item.sale_price}</td>
-                <td>{item.qty_in_stocks}</td>
-                <td>
-                {item.ProductImages?.length > 0 ? (
-                  <div className="images-container">
-                    {item.ProductImages.map((image) => (
-                      <img
-                        key={image.image_id}
-                        src={image.image_url}
-                        alt={`Product Variant ${item.product_item_id}`}
-                        className="variant-image-thumbnail"
-                      />
-                    ))}
-                  </div>
-                ) : (
-                  <span>No Images</span>
-                )}
-              </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        <button className="submit-product-button" onClick={() => navigate('/products')}>To Product Page</button>
-    </div>
-    </div>
-  );
-};
-
-export default ProductDetails;
- */

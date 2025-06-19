@@ -81,6 +81,68 @@
     gap: 16px;
     margin-bottom: 16px;
   }
+
+  /* Variants section styling */
+.product-variants-section {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.variant-count-badge {
+  display: inline-block;
+  margin-left: 12px;
+  padding: 2px 8px;
+  background: #f0f0f0;
+  border-radius: 12px;
+  font-size: 0.8em;
+  color: #555;
+}
+
+/* Enhanced variant table styles */
+.variants-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.variants-table th {
+  text-align: left;
+  padding: 12px;
+  background: #f8f8f8;
+  border-bottom: 2px solid #eee;
+}
+
+.variants-table td {
+  padding: 12px;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.variant-thumbnail {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-right: 4px;
+  border: 1px solid #eee;
+}
+
+.extra-image {
+  opacity: 0.7;
+}
+
+.image-count-badge {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 0.8em;
+}
+  
   
   @media (min-width: 768px) {
     .image-preview-grid {
@@ -135,6 +197,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: 16px;
   }
+  
   
   /* Responsive Design */
   @media (max-width: 768px) {
@@ -227,11 +290,11 @@
     font-size: 12px;
     margin-top: 4px;
     display: block;
-  }px) {
+  }
     .form-grid {
       grid-template-columns: 1fr 1fr;
     }
-  }
+  
   
   .full-width {
     grid-column: 1 / -1;

@@ -1,8 +1,8 @@
 import { ArrowLeft, Upload, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
+import ProductVariants from './AddVariant';
 import './ProductForm.css';
-import ProductVariants from './ProductVariants';
 
 // Mock product data that aligns with ProductTable
 const mockProducts = {
